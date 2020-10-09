@@ -1,27 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import blob from '../../svg/blob.svg';
 import wave from '../../svg/waveBrown.svg';
 import wave2 from '../../svg/waveBrown2.svg';
-// import codeThinking from '../../svg/code_thinking.svg';
-// import textLogo from '../../svg/logo.svg';
 
-// import { gsap, TimelineLite } from 'gsap';
 import { useMediaQuery } from 'react-responsive';
 import './Home.scss';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-  useEffect(() => {
-    // const tl = new TimelineLite();
-    // tl.to('.homeContainer', 0, { opacity: '0' })
-    //   .fromTo('.Home', 0.5, { left: '-100%', top: '50%' }, { left: '0%' })
-    //   .fromTo('.Home', 0.5, { height: '2vh' }, { height: '100vh', top: '0%' })
-    //   .to('.homeContainer', 0.5, { opacity: '1' });
-    // const logo = document.querySelectorAll('#logo path');
-    // for (let i = 0; i < logo.length; i++) {
-    //   console.log(`letter ${i} is ${logo[i].getTotalLength()}`);
-    // }
-  }, []);
+  const { t } = useTranslation();
 
   const isLaptop = useMediaQuery({ query: '(min-height: 800px)' });
   let src;
@@ -43,8 +31,7 @@ const Home = () => {
 
         <div className="contentBox">
           <div className="leftContent">
-            <h2>Hello, I'am</h2>
-            {/* <img src={textLogo} alt="textLogo"></img> */}
+            <h2>{t('Hello.1')}</h2>
             <svg
               id="logo"
               width="1039"
@@ -120,11 +107,9 @@ const Home = () => {
               />
             </svg>
             <h3>Front End Developer</h3>
-
-            <button className="btnContent">View my work</button>
+            <button className="btnContent">{t('View.1')}</button>
           </div>
           <div className="rightContent">
-            {/* <img src={codeThinking} alt="codeThinking"></img> */}
             <svg
               width="1083"
               height="450"

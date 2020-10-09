@@ -1,0 +1,71 @@
+{
+  "Home": {
+    "1": "Home"
+  },
+  "About": {
+    "1": "About"
+  },
+  "Projects": {
+    "1": "Projects"
+  },
+  "Skills": {
+    "1": "Skills"
+  },
+  "Contact": {
+    "1": "Contact"
+  },
+  "Hello": {
+    "1": "Hello, I'am"
+  },
+  "View": {
+    "1": "View my work"
+  },
+  "Aboutme": {
+    "1": "About"
+  },
+  "Myself": {
+    "1": "Myself"
+  },
+  "Graduated": {
+    "1": "I graduated from the Białystok University of Technology in the field of Computer Science, after that I decided to learn front-end and I am at the beginning of my path and hungry to learn more & more..."
+  },
+  "CV": {
+    "1": "Download CV"
+  },
+  "Foody": {
+    "1": "Single-page website for restaurant using some JS/CSS animations while scrolling."
+  },
+  "Foodfinder": {
+    "1": "Recipe Searching Website using Vanilla JS. This project use Webpack for bundling everything and Babel to convert new JS code into compatible version for older browsers"
+  },
+  "Foodbuilder": {
+    "1": "Food Builder crated with React with User Authentication, features: User Authentication, Add/Remove ingredients to Burger, Add Order to Firebase Database, List of submited Orders."
+  },
+  "Zakopane": {
+    "1": "Simple website created with WordPress which present Zakopane as place to visit."
+  },
+  "Orderfood": {
+    "1": "Food website allowing user to order food. This App using Gloria Food Plugin: Free Online Ordering System for Restaurants."
+  },
+  "Tools": {
+    "1": "Which tools do i use?"
+  },
+  "Contactform": {
+    "1": "Contact Form"
+  },
+  "Yourname": {
+    "1": "Your Name"
+  },
+  "Youremail": {
+    "1": "Your Email Address"
+  },
+  "Typemsg": {
+    "1": "Type your message here..."
+  },
+  "Submit": {
+    "1": "Wyślij"
+  },
+  "Sending": {
+    "1": "Sending..."
+  }
+}

@@ -4,6 +4,8 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
+  /* background: #141413; */
+
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -20,8 +22,8 @@ html {
 html,
 body {
   margin: 0;
-  height: 100%;
-  overflow: hidden;
+  padding: 0;
+  /* overflow: hidden; */
 }
 
 a {

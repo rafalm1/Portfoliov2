@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
 
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
@@ -15,6 +16,7 @@ const routes = [
   { path: '/about', name: 'About', Component: About },
   { path: '/contact', name: 'Contact', Component: Contact },
   { path: '/projects', name: 'Projects', Component: Projects },
+  { path: '/skills', name: 'Skills', Component: Skills },
 ];
 
 let tl = new TimelineLite();
@@ -25,20 +27,29 @@ function App() {
     //   x: -1000,
     // });
 
-    tl.to(node.children[0].firstElementChild, 0.5, { opacity: '0' })
-      .fromTo(
-        node.children[0],
-        0.5,
-        { left: '-100%', top: '50%' },
-        { left: '0%' }
-      )
-      .fromTo(
-        node.children[0],
-        0.5,
-        { height: '2vh' },
-        { height: '100vh', top: '0%' }
-      )
-      .to(node.children[0].firstElementChild, 0.5, { opacity: '1' });
+    console.log(node.children[0].className);
+
+    if (
+      node.children[0].className === 'Skills' ||
+      node.children[0].className === 'Projects'
+    ) {
+      // do nothing
+    } else {
+      tl.to(node.children[0].firstElementChild, 0.5, { opacity: '0' })
+        .fromTo(
+          node.children[0],
+          0.5,
+          { left: '-100%', top: '50%' },
+          { left: '0%' }
+        )
+        .fromTo(
+          node.children[0],
+          0.5,
+          { height: '2vh' },
+          { height: '100vh', top: '0%' }
+        )
+        .to(node.children[0].firstElementChild, 0.5, { opacity: '1' });
+    }
   };
 
   const onExit = (node) => {

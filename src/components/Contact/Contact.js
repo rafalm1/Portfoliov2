@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import './Contact.scss';
-import blob3 from '../../svg/blob3.svg';
 import wave from '../../svg/waveBrown.svg';
 import wave2 from '../../svg/waveBrown2.svg';
-
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-  useEffect(() => {}, []);
+  const { t } = useTranslation();
 
   const isLaptop = useMediaQuery({ query: '(min-height: 800px)' });
   let src;
@@ -21,54 +20,64 @@ const Contact = () => {
   return (
     <div className="Contact">
       <div className="contactContainer">
-        <div className="blobBox">
-          <img id="blob" src={blob3} alt="blob"></img>
-        </div>
         <div className="waveBox">
           <img id="wave" src={src} alt="wave"></img>
         </div>
 
         <div className="contentBox">
           <div className="leftContent">
-            <form name="contact" method="POST" data-netlify="true">
-              <p>
-                <label>
-                  Your Name: <input type="text" name="name" />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Your Email: <input type="email" name="email" />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Your Role:{' '}
-                  <select name="role[]" multiple>
-                    <option value="leader">Leader</option>
-                    <option value="follower">Follower</option>
-                  </select>
-                </label>
-              </p>
-              <p>
-                <label>
-                  Message: <textarea name="message"></textarea>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input name="myfile" type="file" placeholder="Upload File" />
-                </label>
-              </p>
-              <p>
-                <div data-netlify-recaptcha="true"></div>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-            </form>
+            <div className="container">
+              <form id="contactForm" action="" method="post">
+                <h3>{t('Contactform.1')}</h3>
+                <fieldset>
+                  <input
+                    placeholder={t('Yourname.1')}
+                    type="text"
+                    tabIndex="1"
+                    required
+                    autoFocus
+                  />
+                </fieldset>
+                <fieldset>
+                  <input
+                    placeholder={t('Youremail.1')}
+                    type="email"
+                    tabIndex="2"
+                    required
+                  />
+                </fieldset>
+                <fieldset>
+                  <textarea
+                    placeholder={t('Typemsg.1')}
+                    type="message"
+                    tabIndex="5"
+                    required
+                  ></textarea>
+                </fieldset>
+                <fieldset>
+                  <button
+                    name="submit"
+                    type="submit"
+                    id="contact-submit"
+                    data-submit={t('Sending.1')}
+                  >
+                    {t('Submit.1')}
+                  </button>
+                </fieldset>
+              </form>
+            </div>
           </div>
           <div className="rightContent">
+            <div className="info">
+              <div className="info-row">
+                <i className="fas fa-phone-alt"></i>
+                <span>797 205 937</span>
+              </div>
+              <div className="info-row">
+                <i className="fas fa-envelope"></i>
+                <span>nowakj917@gmail.com</span>
+              </div>
+            </div>
             <svg
               id="contact"
               width="1096"

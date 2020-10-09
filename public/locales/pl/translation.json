@@ -1,0 +1,71 @@
+{
+  "Home": {
+    "1": "Strona Główna"
+  },
+  "About": {
+    "1": "O mnie"
+  },
+  "Projects": {
+    "1": "Projekty"
+  },
+  "Skills": {
+    "1": "Umiejętności"
+  },
+  "Contact": {
+    "1": "Kontakt"
+  },
+  "Hello": {
+    "1": "Cześć, nazywam się"
+  },
+  "View": {
+    "1": "Zobacz moje projekty"
+  },
+  "Aboutme": {
+    "1": "O MNIE"
+  },
+  "Myself": {
+    "1": "Trochę"
+  },
+  "Graduated": {
+    "1": "Ukończyłem Politechnikę Białostocką na kierunku Informatyka, po czym postanowiłem nauczyć się front-endu, jestem na początku swojej drogi i jestem głodny, aby dowiedzieć się więcej i więcej..."
+  },
+  "CV": {
+    "1": "Pobierz CV"
+  },
+  "Foody": {
+    "1": "Strona SPA dla restauracji wykorzystująca JS/CSS do twrozenia animacji podczas przewijania."
+  },
+  "Foodfinder": {
+    "1": "Strona do wyszukiwania przepisów stworzona w Vanilla JS. Ten projekt wykorzystuje Webpack do wiązania wszystkich plików w jeden i Babel do konwersji wersji ES6 JS na kompatybilną wersję dla starszych przeglądarek."
+  },
+  "Foodbuilder": {
+    "1": "Food Builder stworzona w React, strona posiada: Uwierzytelnianie użytkownika, dodawanie/usuwanie składników do Burgera, dodawanie zamówień do bazy danych Firebase, wyświetlanie listy składanych zamówień."
+  },
+  "Zakopane": {
+    "1": "Prosta strona wizytówka stworzona za pomocą WordPressa, która prezentuje Zakopane jako miejsce do odwiedzenia."
+  },
+  "Orderfood": {
+    "1": "Strona pozwalająca na zamawianie żywności. Aplikacja ta wykorzystuje Gloria Food Plugin: Darmowy system zamówień online dla restauracji."
+  },
+  "Tools": {
+    "1": "Z jakich narzędzi korzystam?"
+  },
+  "Contactform": {
+    "1": "Formularz kontaktowy"
+  },
+  "Yourname": {
+    "1": "Twoje Imię"
+  },
+  "Youremail": {
+    "1": "Twój adres Email"
+  },
+  "Typemsg": {
+    "1": "Wpisz swoją wiadomość..."
+  },
+  "Submit": {
+    "1": "Wyślij"
+  },
+  "Sending": {
+    "1": "Wysyłanie..."
+  }
+}

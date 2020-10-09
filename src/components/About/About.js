@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import './About.scss';
 import blob2 from '../../svg/blob2.svg';
 import wave from '../../svg/waveBrown.svg';
 import wave2 from '../../svg/waveBrown2.svg';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
-  useEffect(() => {}, []);
+  const { t } = useTranslation();
 
   const isLaptop = useMediaQuery({ query: '(min-height: 800px)' });
   let src;
@@ -29,7 +30,6 @@ const About = () => {
 
         <div className="contentBox">
           <div className="rightContent">
-            {/* <img id="about" src={about} alt="about"></img> */}
             <svg
               id="about"
               width="1032"
@@ -296,15 +296,10 @@ const About = () => {
           <div className="leftContent">
             <div className="about-details" id="about">
               <div className="about-heading">
-                <h1>About</h1>
-                <h6>Myself</h6>
+                <h1>{t('Aboutme.1')}</h1>
+                <h6>{t('Myself.1')}</h6>
               </div>
-              <p>
-                I graduated from the Białystok University of Technology in the
-                field of Computer Science, after that I decided to learn
-                front-end and I am at the beginning of my path and hungry to
-                learn more & more...
-              </p>
+              <p>{t('Graduated.1')}</p>
               <div className="cv-box">
                 <a
                   href="https://gofile.io/d/AeMIg4"
@@ -312,7 +307,7 @@ const About = () => {
                   id="cv"
                   target="_blank"
                 >
-                  Download CV
+                  {t('CV.1')}
                 </a>
               </div>
             </div>

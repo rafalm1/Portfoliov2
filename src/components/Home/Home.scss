@@ -1,8 +1,4 @@
 .Home {
-  // margin-top: 100px;
-  // background: url('../../svg/back.svg');
-  // background-size: cover;
-  // padding: 200px;
   background: linear-gradient(160deg, rgb(17, 17, 16) 0%, rgb(43, 41, 41) 100%);
   position: absolute;
   width: 100%;
@@ -19,7 +15,7 @@
     .waveBox {
       // border: 2px solid white;
       position: absolute;
-      bottom: -5px;
+      bottom: 0px;
       right: 0;
       width: 100%;
     }
@@ -39,12 +35,20 @@
 
       .leftContent {
         // border: 2px solid green;
-        width: 40%;
+        width: 45%;
 
         h2 {
           letter-spacing: 1px;
           margin-bottom: 30px;
           font-size: 40px;
+        }
+
+        #logo {
+          // border: 2px solid pink;
+          width: 90%;
+          height: 100%;
+          margin-bottom: 20px;
+          animation: fill 0.5s ease forwards 4s;
         }
 
         h3 {
@@ -53,7 +57,7 @@
 
         .btnContent {
           margin-top: 40px;
-          font-size: 15px;
+          font-size: 18px;
           padding: 20px 50px;
           border-radius: 30px;
           color: #fff;
@@ -234,17 +238,6 @@
   }
 }
 
-// @media (max-height: 800px) {
-//   .Home {
-//     .homeContainer {
-//       .waveBox {
-//         // border: 2px solid white;
-//         width: 100%;
-//       }
-//     }
-//   }
-// }
-
 #shoe {
   animation: rotate linear 1s infinite alternate;
   transform-origin: right;
@@ -258,15 +251,6 @@
   100% {
     transform: rotate(-2deg);
   }
-}
-
-#logo {
-  // border: 2px solid pink;
-  // min-width: 384px;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-  animation: fill 0.5s ease forwards 4s;
 }
 
 #logo path:nth-child(1) {
@@ -357,7 +341,7 @@
       .contentBox {
         .leftContent {
           h2 {
-            font-size: 35px;
+            font-size: 33px;
           }
 
           h3 {
@@ -380,22 +364,9 @@
     .homeContainer {
       .blobBox {
         opacity: 0;
-        // bottom: 20%;
-        // right: 0;
-        // width: 50vw;
-      }
-
-      .waveBox {
-        // bottom: -5px;
-        // right: 0;
-        // width: 100%;
       }
 
       .contentBox {
-        // display: flex;
-        // width: 90vw;
-        // align-items: center;
-        // justify-content: space-between;
         margin-top: 120px;
         padding: 100px 0px;
         flex-direction: column;
@@ -411,7 +382,7 @@
 
           h2 {
             margin-bottom: 20px;
-            font-size: 30px;
+            font-size: 28px;
           }
 
           h3 {
@@ -424,12 +395,7 @@
         }
 
         .rightContent {
-          width: 100%;
-
-          svg {
-            // width: 100%;
-            // height: 100%;
-          }
+          width: 80%;
         }
       }
     }

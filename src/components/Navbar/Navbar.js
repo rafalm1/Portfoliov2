@@ -2,8 +2,15 @@ import React, { useEffect } from 'react';
 
 import { NavLink } from 'react-router-dom';
 import './Navbar.scss';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+
+  function changeLang(lang) {
+    i18n.changeLanguage(lang);
+  }
+
   const toggleOverflowMenu = () => {
     if (document.body.style.overflow === 'hidden') {
       document.body.style.overflow = 'auto';
@@ -58,7 +65,7 @@ const Navbar = () => {
             exact
             activeStyle={{ borderBottom: '3px solid #c7a971' }}
           >
-            Home
+            {t('Home.1')}
           </NavLink>
         </li>
         <li>
@@ -67,7 +74,7 @@ const Navbar = () => {
             exact
             activeStyle={{ borderBottom: '3px solid #c7a971' }}
           >
-            About
+            {t('About.1')}
           </NavLink>
         </li>
 
@@ -77,7 +84,16 @@ const Navbar = () => {
             exact
             activeStyle={{ borderBottom: '3px solid #c7a971' }}
           >
-            Projects
+            {t('Projects.1')}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/skills"
+            exact
+            activeStyle={{ borderBottom: '3px solid #c7a971' }}
+          >
+            {t('Skills.1')}
           </NavLink>
         </li>
         <li>
@@ -86,9 +102,15 @@ const Navbar = () => {
             exact
             activeStyle={{ borderBottom: '3px solid #c7a971' }}
           >
-            Contact
+            {t('Contact.1')}
           </NavLink>
         </li>
+        <button className="langBtn" onClick={() => changeLang('en')}>
+          EN
+        </button>
+        <button className="langBtn" onClick={() => changeLang('pl')}>
+          PL
+        </button>
       </ul>
     </nav>
   );

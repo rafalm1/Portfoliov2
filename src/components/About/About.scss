@@ -11,14 +11,13 @@
       left: -10%;
       width: 50vw;
       transform: rotate(-20deg);
-      // opacity: 0;
     }
 
     .waveBox {
       // border: 2px solid white;
       transform: scaleX(-1);
       position: absolute;
-      bottom: -5px;
+      bottom: 0px;
       left: 0;
       width: 100%;
     }
@@ -88,13 +87,12 @@
             }
           }
           p {
-            color: #d3d3d3;
+            color: #fff;
             font-size: 20px;
-            text-align: justify;
+            text-align: center;
           }
 
           //CV BUTTON
-
           .cv-box {
             margin-top: 3rem;
 
@@ -272,13 +270,6 @@
             }
           }
         }
-
-        .rightContent {
-          // border: 2px solid yellow;
-          // margin-top: 40px;
-          // margin-right: 30px;
-          // width: 80%;
-        }
       }
     }
   }
@@ -288,20 +279,15 @@
   .About {
     .aboutContainer {
       .blobBox {
-        // bottom: 20%;
-        // left: -10%;
-        // width: 50vw;
         opacity: 0;
       }
 
       .contentBox {
-        //red
-        margin-top: 130px;
+        margin-top: 120px;
         padding: 10px;
         flex-direction: column-reverse;
 
         .leftContent {
-          // border: 2px solid green;
           width: 100%;
 
           .about-details {
@@ -322,12 +308,11 @@
 
             //CV BUTTON
             .cv-box {
-              margin-top: 2rem;
+              margin-top: 1.7rem;
 
               a {
-                font-size: 15px;
                 &.download-cv {
-                  padding: 10px 15px;
+                  padding: 8px 12px;
                 }
               }
             }
@@ -335,10 +320,13 @@
         }
 
         .rightContent {
-          // border: 2px solid yellow;
-          margin-top: 40px;
+          margin-top: 25px;
           margin-right: 30px;
           width: 80%;
+
+          svg {
+            width: 82%;
+          }
         }
       }
     }
