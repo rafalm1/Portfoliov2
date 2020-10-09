@@ -306,6 +306,7 @@ const About = () => {
                   className="download-cv"
                   id="cv"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {t('CV.1')}
                 </a>
