@@ -64,24 +64,27 @@ function App() {
     <div className="App">
       <Navbar />
 
-      {routes.map(({ name, path, Component }) => (
-        <Route key={name} path={path} exact>
-          {({ match }) => (
-            <CSSTransition
-              in={match != null}
-              timeout={1200}
-              classNames="page"
-              unmountOnExit
-              onEnter={onEnter}
-              onExit={onExit}
-            >
-              <div className="page">
-                <Component />
-              </div>
-            </CSSTransition>
-          )}
-        </Route>
-      ))}
+      <Switch>
+        {routes.map(({ name, path, Component }) => (
+          <Route key={name} path={path} exact>
+            {({ match }) => (
+              <CSSTransition
+                in={match != null}
+                timeout={1200}
+                classNames="page"
+                unmountOnExit
+                onEnter={onEnter}
+                onExit={onExit}
+              >
+                <div className="page">
+                  <Component />
+                </div>
+              </CSSTransition>
+            )}
+          </Route>
+        ))}
+        <Redirect to="/" />
+      </Switch>
 
       {/* <Switch>
         <Route exact path="/" component={Home} />
