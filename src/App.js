@@ -22,6 +22,8 @@ const routes = [
 let tl = new TimelineLite();
 
 function App() {
+  gsap.registerPlugin(TimelineLite);
+
   const onEnter = (node) => {
     // gsap.from(node.children[0], 2, {
     //   x: -1000,
