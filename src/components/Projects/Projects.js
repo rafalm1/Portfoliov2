@@ -1,11 +1,11 @@
 import React from 'react';
 
 import './Projects.scss';
-import foody from '../../img/foody.PNG';
-import finder from '../../img/finder.PNG';
-import builder from '../../img/builder.PNG';
-import zakopane from '../../img/zakopane.PNG';
-import order from '../../img/order-food.PNG';
+import foody from '../../img//foody.jpg';
+import finder from '../../img//finder.jpg';
+import builder from '../../img/builder.jpg';
+import zakopane from '../../img/zakopane.jpg';
+import order from '../../img/order-food.jpg';
 import { useTranslation } from 'react-i18next';
 
 

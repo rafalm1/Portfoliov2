@@ -187,7 +187,7 @@ nav {
 
       li,
       button {
-        margin-bottom: 30px;
+        margin-bottom: 35px;
         font-size: 18px;
 
         @include mobile {
@@ -195,7 +195,7 @@ nav {
         }
 
         &:first-child {
-          margin-top: 100px;
+          margin-top: 30px;
         }
       }
     }

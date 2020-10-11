@@ -8,6 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 import './Home.scss';
 import { useTranslation } from 'react-i18next';
 import { TimelineLite } from 'gsap';
+import { useHistory } from 'react-router-dom';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -37,6 +38,12 @@ const Home = () => {
     src = wave;
   } else {
     src = wave2;
+  }
+
+  const history = useHistory();
+
+  const redirectProjects = () => {
+    history.push('/projects');
   }
 
   return (
@@ -127,7 +134,7 @@ const Home = () => {
               />
             </svg>
             <h3>Front End Developer</h3>
-            <button className="btnContent">{t('View.1')}</button>
+            <button className="btnContent" onClick={redirectProjects}>{t('View.1')}</button>
           </div>
           <div className="rightContent">
             <svg
