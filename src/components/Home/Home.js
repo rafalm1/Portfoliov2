@@ -14,22 +14,22 @@ const Home = () => {
 
   let tl = new TimelineLite();
 
-  useEffect(() => {
-    tl.to('.homeContainer', 0.5, { opacity: '0' })
-        .fromTo(
-          '.Home',
-          0.5,
-          { left: '-100%', top: '50%' },
-          { left: '0%' }
-        )
-        .fromTo(
-          '.Home',
-          0.5,
-          { height: '2vh' },
-          { height: '100vh', top: '0%' }
-        )
-        .to('.homeContainer', 0.5, { opacity: '1' });
-  }, [])
+  // useEffect(() => {
+  //   tl.to('.homeContainer', 0.5, { opacity: '0' })
+  //       .fromTo(
+  //         '.Home',
+  //         0.5,
+  //         { left: '-100%', top: '50%' },
+  //         { left: '0%' }
+  //       )
+  //       .fromTo(
+  //         '.Home',
+  //         0.5,
+  //         { height: '2vh' },
+  //         { height: '100vh', top: '0%' }
+  //       )
+  //       .to('.homeContainer', 0.5, { opacity: '1' });
+  // }, [])
 
   const isLaptop = useMediaQuery({ query: '(min-height: 800px)' });
   let src;
