@@ -7,6 +7,7 @@ import wave2 from '../../svg/waveBrown2.svg';
 import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 
+
 const About = () => {
   const { t } = useTranslation();
 

@@ -8,12 +8,13 @@ import zakopane from '../../img/zakopane.PNG';
 import order from '../../img/order-food.PNG';
 import { useTranslation } from 'react-i18next';
 
+
 const Projects = () => {
   const { t } = useTranslation();
   document.getElementsByTagName('body')[0].style.overflow = 'auto';
 
   return (
-    <div className="Projects">
+    <div className="Projects" id="proj">
       <div className="projectsContainer">
         <div className="my-projects">
           <div className="project">
