@@ -27,7 +27,7 @@ const Contact = () => {
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form id="contactForm" method="post" data-netlify="true">
+              <form id="contactForm" method="POST" data-netlify="true">
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
