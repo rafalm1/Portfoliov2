@@ -27,7 +27,7 @@ const Contact = () => {
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form id="contactForm" action="" method="post">
+              <form id="contactForm" method="post" data-netlify="true">
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
@@ -55,6 +55,11 @@ const Contact = () => {
                   ></textarea>
                 </fieldset>
                 <fieldset>
+                  <div data-netlify-recaptcha="true">
+
+                  </div>
+                </fieldset>
+                <fieldset>
                   <button
                     name="submit"
                     type="submit"
@@ -75,7 +80,7 @@ const Contact = () => {
               </div>
               <div className="info-row">
                 <i className="fas fa-envelope"></i>
-                <span>nowakj917@gmail.com</span>
+                <span>rm.rafalmalyszko@gmail.com</span>
               </div>
             </div>
             <svg

@@ -303,7 +303,7 @@ const About = () => {
               <p>{t('Graduated.1')}</p>
               <div className="cv-box">
                 <a
-                  href="https://gofile.io/d/AeMIg4"
+                  href="https://workupload.com/pdf/bz3v9HxrMaB"
                   className="download-cv"
                   id="cv"
                   target="_blank"

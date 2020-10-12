@@ -3,13 +3,14 @@
   position: absolute;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 
   .contactContainer {
     .waveBox {
       // border: 2px solid white;
       transform: scaleX(-1);
       position: absolute;
-      bottom: 0px;
+      bottom: -5px;
       left: 0;
       width: 100%;
     }
