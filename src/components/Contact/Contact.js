@@ -27,11 +27,12 @@ const Contact = () => {
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form id="contactForm" method="POST" data-netlify="true">
+              <form id="contactForm" action="POST" data-netlify="true">
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
                     placeholder={t('Yourname.1')}
+                    name="name"
                     type="text"
                     tabIndex="1"
                     required
@@ -40,6 +41,7 @@ const Contact = () => {
                 </fieldset>
                 <fieldset>
                   <input
+                    name="email"
                     placeholder={t('Youremail.1')}
                     type="email"
                     tabIndex="2"
@@ -48,6 +50,7 @@ const Contact = () => {
                 </fieldset>
                 <fieldset>
                   <textarea
+                    name="message"
                     placeholder={t('Typemsg.1')}
                     type="message"
                     tabIndex="5"
