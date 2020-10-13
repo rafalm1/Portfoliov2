@@ -28,7 +28,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View LIVE
+              {t('Live.1')}
             </a>
             <a
               href="https://github.com/1haker/food-app"
@@ -36,7 +36,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GITHUB CODE
+              {t('Github.1')}
             </a>
           </div>
           <div className="project">
@@ -45,12 +45,12 @@ const Projects = () => {
             <h2>Food Finder</h2>
             <p>{t('Foodfinder.1')}</p>
             <a
-              href="https://admiring-noyce-914b18.netlify.app/"
+              href="https://fervent-pare-ac13e2.netlify.app/"
               className="cta"
               target="_blank"
               rel="noopener noreferrer"
             >
-              View LIVE
+              {t('Live.1')}
             </a>
             <a
               href="https://github.com/1haker/food-finder"
@@ -58,7 +58,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GITHUB CODE
+              {t('Github.1')}
             </a>
           </div>
           <div className="project">
@@ -72,7 +72,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View LIVE
+              {t('Live.1')}
             </a>
             <a
               href="https://github.com/1haker/food-builder"
@@ -80,7 +80,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GITHUB CODE
+              {t('Github.1')}
             </a>
           </div>
           <div className="project">
@@ -94,7 +94,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View LIVE
+              {t('Live.1')}
             </a>
             <a
               href="https://github.com/1haker/zakopane-app"
@@ -102,7 +102,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GITHUB CODE
+              {t('Github.1')}
             </a>
           </div>
           <div className="project">
@@ -116,7 +116,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View LIVE
+              {t('Live.1')}
             </a>
             <a
               href="https://github.com/1haker/Order-Food"
@@ -124,7 +124,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GITHUB CODE
+              {t('Github.1')}
             </a>
           </div>
         </div>

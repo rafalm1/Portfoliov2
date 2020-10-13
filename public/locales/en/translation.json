@@ -65,7 +65,10 @@
   "Submit": {
     "1": "Wyślij"
   },
-  "Sending": {
-    "1": "Sending..."
+  "Live": {
+    "1": "View Live"
+  },
+  "Github": {
+    "1": "Github Code"
   }
 }
