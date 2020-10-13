@@ -24,10 +24,7 @@ const tl = new TimelineLite();
 function App() {
   gsap.registerPlugin(TimelineLite);
 
-  const onEnter = (node) => {
-
-    console.log('onEnter');
- 
+  const onEnter = (node) => { 
     if (
       node.children[0].className === 'Skills' ||
       node.children[0].className === 'Projects'

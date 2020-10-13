@@ -45,12 +45,7 @@ const Contact = () => {
 
   return (
     <div className="Contact">
-      <div id="toastSuccess">Message send
-          <i className="fas fa-times" onClick={toggleToastSuccess}></i>
-      </div>
-      <div id="toastError">Error sending message
-          <i className="fas fa-times" onClick={toggleToastError} ></i>
-      </div>
+      
       <div className="contactContainer">
         <div className="waveBox">
           <img id="wave" src={src} alt="wave"></img>
@@ -483,6 +478,12 @@ const Contact = () => {
             </svg>
           </div>
         </div>
+      </div>
+      <div id="toastSuccess">Message send
+          <i className="fas fa-times" onClick={toggleToastSuccess}></i>
+      </div>
+      <div id="toastError">Error sending message
+          <i className="fas fa-times" onClick={toggleToastError} ></i>
       </div>
     </div>
   );
