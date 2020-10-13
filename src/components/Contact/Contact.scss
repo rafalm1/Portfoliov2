@@ -188,6 +188,33 @@
   }
 }
 
+#toastSuccess,
+#toastError {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 25px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #c7a971;
+  display: none;
+
+  .fa-times {
+    z-index: 110;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
+}
+
+#toastSuccess.change,
+#toastError.change {
+  display: block;
+}
+
 //Contact Form
 
 .container {
@@ -201,7 +228,7 @@
 #contactForm input[type='email'],
 #contactForm input[type='message'],
 #contactForm textarea,
-#contactForm button[type='submit'] {
+#contactForm input[type='submit'] {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -265,7 +292,7 @@ fieldset {
   resize: none;
 }
 
-#contactForm button[type='submit'] {
+#contactForm input[type='submit'] {
   cursor: pointer;
   width: 100%;
   border: none;
@@ -276,14 +303,14 @@ fieldset {
   font-size: 15px;
 }
 
-#contactForm button[type='submit']:hover {
+#contactForm input[type='submit']:hover {
   background: rgba(173, 146, 96, 0.842);
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-#contactForm button[type='submit']:active {
+#contactForm input[type='submit']:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 

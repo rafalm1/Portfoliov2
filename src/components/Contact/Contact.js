@@ -5,8 +5,34 @@ import wave from '../../svg/waveBrown.svg';
 import wave2 from '../../svg/waveBrown2.svg';
 import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+
+ const toggleToastSuccess = () => {
+  const toastSuccess = document.getElementById('toastSuccess');
+  toastSuccess.classList.toggle('change');
+ }
+
+ const toggleToastError = () => {
+  const toastError = document.getElementById('toastError');
+  toastError.classList.toggle('change');
+ }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+
+    emailjs.sendForm('gmail', 'template_8cdhapo', e.target, 'user_ibQPgKofW8aW6TOe9mrM3')
+      .then((result) => {
+        toggleToastSuccess();
+        }, (error) => {
+              toggleToastError();
+      });
+
+    e.target.reset();
+  }
+
   const { t } = useTranslation();
 
   const isLaptop = useMediaQuery({ query: '(min-height: 800px)' });
@@ -19,6 +45,12 @@ const Contact = () => {
 
   return (
     <div className="Contact">
+      <div id="toastSuccess">Message send
+          <i className="fas fa-times" onClick={toggleToastSuccess}></i>
+      </div>
+      <div id="toastError">Error sending message
+          <i className="fas fa-times" onClick={toggleToastError} ></i>
+      </div>
       <div className="contactContainer">
         <div className="waveBox">
           <img id="wave" src={src} alt="wave"></img>
@@ -27,7 +59,7 @@ const Contact = () => {
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form id="contactForm" action="POST" data-netlify="true">
+              <form id="contactForm" onSubmit={sendEmail}>
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
@@ -58,19 +90,10 @@ const Contact = () => {
                   ></textarea>
                 </fieldset>
                 <fieldset>
-                  <div data-netlify-recaptcha="true">
-
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <button
-                    name="submit"
+                  <input
                     type="submit"
-                    id="contact-submit"
-                    data-submit={t('Sending.1')}
-                  >
-                    {t('Submit.1')}
-                  </button>
+                    value={t('Submit.1')}>
+                  </input>
                 </fieldset>
               </form>
             </div>
