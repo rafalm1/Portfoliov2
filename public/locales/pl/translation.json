@@ -27,13 +27,13 @@
     "1": "Trochę"
   },
   "Graduated": {
-    "1": "Ukończyłem Politechnikę Białostocką na kierunku Informatyka, po czym wybrałem drogę tworzenia stron internetowych, jestem w stanie wykonać dowolną stronę wizytówkę dla Twojej firmy, która będzie się wyróżniać i płynnie działać."
+    "1": "Ukończyłem Politechnikę Białostocką na kierunku Informatyka, po czym wybrałem drogę tworzenia stron internetowych, jestem w stanie wykonać dowolną stronę wizytówkę dla Ciebie lub Twojej firmy, która będzie się wyróżniać i płynnie działać."
   },
   "CV": {
     "1": "Pobierz CV"
   },
   "Foody": {
-    "1": "Strona SPA dla restauracji wykorzystująca JS/CSS do twrozenia animacji podczas przewijania."
+    "1": "Strona SPA dla restauracji wykorzystująca JS/CSS do tworzenia animacji podczas przewijania."
   },
   "Foodfinder": {
     "1": "Strona do wyszukiwania przepisów stworzona w Vanilla JS. Ten projekt wykorzystuje Webpack do wiązania wszystkich plików w jeden i Babel do konwersji wersji ES6 JS na kompatybilną wersję dla starszych przeglądarek."
