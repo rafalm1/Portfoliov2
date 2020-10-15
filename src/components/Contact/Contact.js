@@ -479,10 +479,10 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div id="toastSuccess">Message send
+      <div id="toastSuccess">{t('MsgSend.1')}
           <i className="fas fa-times" onClick={toggleToastSuccess}></i>
       </div>
-      <div id="toastError">Error sending message
+      <div id="toastError">{t('MsgError.1')}
           <i className="fas fa-times" onClick={toggleToastError} ></i>
       </div>
     </div>

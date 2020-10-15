@@ -24,11 +24,17 @@ const Skills = () => {
           <h2>{t('Tools.1')}</h2>
         </div>
         <div className="my-skills">
+        <div className="skill">
+            <div className="icon-container">
+              <img src={react} alt="skill" />
+            </div>
+            <h2>React</h2>
+          </div>
           <div className="skill">
             <div className="icon-container">
-              <img src={wordpress} alt="skill" />
+              <img src={js} alt="skill" />
             </div>
-            <h2>WordPress</h2>
+            <h2>JavaScript</h2>
           </div>
           <div className="skill">
             <div className="icon-container">
@@ -48,12 +54,7 @@ const Skills = () => {
             </div>
             <h2>Sass</h2>
           </div>
-          <div className="skill">
-            <div className="icon-container">
-              <img src={js} alt="skill" />
-            </div>
-            <h2>JavaScript</h2>
-          </div>
+          
           <div className="skill">
             <div className="icon-container">
               <img src={jquery} alt="skill" />
@@ -62,11 +63,10 @@ const Skills = () => {
           </div>
           <div className="skill">
             <div className="icon-container">
-              <img src={react} alt="skill" />
+              <img src={wordpress} alt="skill" />
             </div>
-            <h2>React</h2>
+            <h2>WordPress</h2>
           </div>
-
           <div className="skill">
             <div className="icon-container">
               <img src={git} alt="skill" />

@@ -70,5 +70,11 @@
   },
   "Github": {
     "1": "Github Code"
+  },
+  "MsgSend": {
+    "1": "Message send"
+  },
+  "MsgError": {
+    "1": "Error sending message"
   }
 }
