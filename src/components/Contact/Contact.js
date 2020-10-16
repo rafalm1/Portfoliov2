@@ -9,8 +9,6 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
 
-  // document.getElementsByTagName('body')[0].style.overflow = 'auto';
-
  const toggleToastSuccess = () => {
   const toastSuccess = document.getElementById('toastSuccess');
   toastSuccess.classList.toggle('change');
