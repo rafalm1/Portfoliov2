@@ -27,7 +27,8 @@ function App() {
   const onEnter = (node) => { 
     if (
       node.children[0].className === 'Skills' ||
-      node.children[0].className === 'Projects'
+      node.children[0].className === 'Projects' ||
+      node.children[0].className === 'Contact' 
     ) {
       tl.to(node.children[0].firstElementChild, 0.5, { opacity: '0' })
         .fromTo(
