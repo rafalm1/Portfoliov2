@@ -1,6 +1,6 @@
 # Portfolio
 
-View LIVE: https://reverent-mcclintock-eda741.netlify.app/
+View LIVE: rafalmalyszko.net
 
 
 
