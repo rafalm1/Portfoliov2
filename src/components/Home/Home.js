@@ -26,6 +26,11 @@ const Home = () => {
     history.push('/projects');
   };
 
+  const logo = document.querySelectorAll('#logo path');
+  for (let i = 0; i < logo.length; i++) {
+    console.log(`letter ${i + 1} is ${logo[i].getTotalLength()}`);
+  }
+
   return (
     <div className="Home">
       <div className="homeContainer">
@@ -126,6 +131,7 @@ const Home = () => {
                 strokeLinecap="square"
               />
             </svg>
+
             <h3>Front End Developer</h3>
             <button className="btnContent" onClick={redirectProjects}>
               {t('View.1')}
