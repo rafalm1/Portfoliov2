@@ -7,9 +7,13 @@ import * as serviceWorker from './serviceWorker';
 import './i18n';
 import { BrowserRouter } from 'react-router-dom';
 
+
+
+const loader = (<div class="loader"></div>);
+
 ReactDOM.render(
   <BrowserRouter>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={loader}>
       <App />
     </Suspense>
   </BrowserRouter>,
