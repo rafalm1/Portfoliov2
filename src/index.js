@@ -7,9 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import './i18n';
 import { BrowserRouter } from 'react-router-dom';
 
-
-
-const loader = (<div class="loader"></div>);
+const loader = <div className="loader"></div>;
 
 ReactDOM.render(
   <BrowserRouter>
