@@ -51,7 +51,13 @@ const Contact = () => {
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form id="contactForm" onSubmit={sendEmail}>
+              <form
+                id="contactForm"
+                onSubmit={sendEmail}
+                data-netlify="true"
+                method="POST"
+                netlify
+              >
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
