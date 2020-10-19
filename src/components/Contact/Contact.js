@@ -84,7 +84,13 @@ const Contact = () => {
                   <input type="submit" value={t('Submit.1')}></input>
                 </fieldset>
               </form> */}
-              <form id="contactForm" method="POST" data-netlify="true">
+              <form
+                name="contact"
+                id="contactForm"
+                method="POST"
+                data-netlify-recaptcha="true"
+                data-netlify="true"
+              >
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
