@@ -90,6 +90,7 @@ const Contact = () => {
                 method="POST"
                 data-netlify-recaptcha="true"
                 data-netlify="true"
+                netlify
               >
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
