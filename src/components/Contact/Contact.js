@@ -51,11 +51,7 @@ const Contact = () => {
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form
-                id="contactForm"
-                onSubmit={sendEmail}
-                data-netlify-recaptcha="true"
-              >
+              <form id="contactForm" onSubmit={sendEmail}>
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
@@ -85,7 +81,9 @@ const Contact = () => {
                     required
                   ></textarea>
                 </fieldset>
-                <div data-netlify-recaptcha="true"></div>
+                <fieldset>
+                  <div data-netlify-recaptcha="true"></div>
+                </fieldset>
                 <fieldset>
                   <input type="submit" value={t('Submit.1')}></input>
                 </fieldset>
