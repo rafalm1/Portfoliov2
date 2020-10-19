@@ -19,27 +19,27 @@ const Contact = () => {
     toastError.classList.toggle('change');
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm(
-        'gmail',
-        'template_8cdhapo',
-        e.target,
-        'user_ibQPgKofW8aW6TOe9mrM3'
-      )
-      .then(
-        (result) => {
-          toggleToastSuccess();
-        },
-        (error) => {
-          toggleToastError();
-        }
-      );
+  //   emailjs
+  //     .sendForm(
+  //       'gmail',
+  //       'template_8cdhapo',
+  //       e.target,
+  //       'user_ibQPgKofW8aW6TOe9mrM3'
+  //     )
+  //     .then(
+  //       (result) => {
+  //         toggleToastSuccess();
+  //       },
+  //       (error) => {
+  //         toggleToastError();
+  //       }
+  //     );
 
-    e.target.reset();
-  };
+  //   e.target.reset();
+  // };
 
   return (
     <div className="Contact">
@@ -51,7 +51,7 @@ const Contact = () => {
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form id="contactForm" onSubmit={sendEmail}>
+              {/* <form id="contactForm" onSubmit={sendEmail}>
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
@@ -79,6 +79,42 @@ const Contact = () => {
                     tabIndex="5"
                     required
                   ></textarea>
+                </fieldset>
+                <fieldset>
+                  <input type="submit" value={t('Submit.1')}></input>
+                </fieldset>
+              </form> */}
+              <form id="contactForm" action="POST" data-netlify="true">
+                <h3>{t('Contactform.1')}</h3>
+                <fieldset>
+                  <input
+                    placeholder={t('Yourname.1')}
+                    name="name"
+                    type="text"
+                    tabIndex="1"
+                    required
+                  />
+                </fieldset>
+                <fieldset>
+                  <input
+                    name="email"
+                    placeholder={t('Youremail.1')}
+                    type="email"
+                    tabIndex="2"
+                    required
+                  />
+                </fieldset>
+                <fieldset>
+                  <textarea
+                    name="message"
+                    placeholder={t('Typemsg.1')}
+                    type="message"
+                    tabIndex="5"
+                    required
+                  ></textarea>
+                </fieldset>
+                <fieldset>
+                  <div data-netlify-recaptcha="true"></div>
                 </fieldset>
                 <fieldset>
                   <input type="submit" value={t('Submit.1')}></input>
