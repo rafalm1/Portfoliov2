@@ -24,7 +24,7 @@ const Skills = () => {
           <h2>{t('Tools.1')}</h2>
         </div>
         <div className="my-skills">
-        <div className="skill">
+          <div className="skill">
             <div className="icon-container">
               <img src={react} alt="skill" />
             </div>
@@ -54,7 +54,7 @@ const Skills = () => {
             </div>
             <h2>Sass</h2>
           </div>
-          
+
           <div className="skill">
             <div className="icon-container">
               <img src={jquery} alt="skill" />

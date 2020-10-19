@@ -23,7 +23,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
   background-color: #343334;
 }
 
@@ -37,10 +36,12 @@ code {
 }
 
 .loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   border: 8px solid #f3f3f3;
   border-top: 8px solid #c7a971;
   border-radius: 50%;

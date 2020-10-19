@@ -1,60 +1,61 @@
 import React from 'react';
 
 import './Contact.scss';
-import wave from '../../svg/waveBrown.svg';
-import wave2 from '../../svg/waveBrown2.svg';
-import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import emailjs from 'emailjs-com';
+import { Wave } from '../Wave';
 
 const Contact = () => {
+  const { t } = useTranslation();
+  const waveType = Wave();
 
- const toggleToastSuccess = () => {
-  const toastSuccess = document.getElementById('toastSuccess');
-  toastSuccess.classList.toggle('change');
- }
+  const toggleToastSuccess = () => {
+    const toastSuccess = document.getElementById('toastSuccess');
+    toastSuccess.classList.toggle('change');
+  };
 
- const toggleToastError = () => {
-  const toastError = document.getElementById('toastError');
-  toastError.classList.toggle('change');
- }
+  const toggleToastError = () => {
+    const toastError = document.getElementById('toastError');
+    toastError.classList.toggle('change');
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-
-    emailjs.sendForm('gmail', 'template_8cdhapo', e.target, 'user_ibQPgKofW8aW6TOe9mrM3')
-      .then((result) => {
-        toggleToastSuccess();
-        }, (error) => {
-              toggleToastError();
-      });
+    emailjs
+      .sendForm(
+        'gmail',
+        'template_8cdhapo',
+        e.target,
+        'user_ibQPgKofW8aW6TOe9mrM3'
+      )
+      .then(
+        (result) => {
+          toggleToastSuccess();
+        },
+        (error) => {
+          toggleToastError();
+        }
+      );
 
     e.target.reset();
-  }
-
-  const { t } = useTranslation();
-
-  const isLaptop = useMediaQuery({ query: '(min-height: 800px)' });
-  let src;
-  if (isLaptop) {
-    src = wave;
-  } else {
-    src = wave2;
-  }
+  };
 
   return (
     <div className="Contact">
-      
       <div className="contactContainer">
         <div className="waveBox">
-          <img id="wave" src={src} alt="wave"></img>
+          <img id="wave" src={waveType} alt="wave"></img>
         </div>
 
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form id="contactForm" onSubmit={sendEmail}>
+              <form
+                id="contactForm"
+                onSubmit={sendEmail}
+                data-netlify-recaptcha="true"
+              >
                 <h3>{t('Contactform.1')}</h3>
                 <fieldset>
                   <input
@@ -84,11 +85,9 @@ const Contact = () => {
                     required
                   ></textarea>
                 </fieldset>
+                <div data-netlify-recaptcha="true"></div>
                 <fieldset>
-                  <input
-                    type="submit"
-                    value={t('Submit.1')}>
-                  </input>
+                  <input type="submit" value={t('Submit.1')}></input>
                 </fieldset>
               </form>
             </div>
@@ -479,11 +478,13 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div id="toastSuccess">{t('MsgSend.1')}
-          <i className="fas fa-times" onClick={toggleToastSuccess}></i>
+      <div id="toastSuccess">
+        {t('MsgSend.1')}
+        <i className="fas fa-times" onClick={toggleToastSuccess}></i>
       </div>
-      <div id="toastError">{t('MsgError.1')}
-          <i className="fas fa-times" onClick={toggleToastError} ></i>
+      <div id="toastError">
+        {t('MsgError.1')}
+        <i className="fas fa-times" onClick={toggleToastError}></i>
       </div>
     </div>
   );

@@ -2,22 +2,13 @@ import React from 'react';
 
 import './About.scss';
 import blob2 from '../../svg/blob2.svg';
-import wave from '../../svg/waveBrown.svg';
-import wave2 from '../../svg/waveBrown2.svg';
-import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
-
+import { Wave } from '../Wave';
 
 const About = () => {
   const { t } = useTranslation();
 
-  const isLaptop = useMediaQuery({ query: '(min-height: 800px)' });
-  let src;
-  if (isLaptop) {
-    src = wave;
-  } else {
-    src = wave2;
-  }
+  const waveType = Wave();
 
   return (
     <div className="About">
@@ -26,7 +17,7 @@ const About = () => {
           <img id="blob" src={blob2} alt="blob"></img>
         </div>
         <div className="waveBox">
-          <img id="wave" src={src} alt="wave"></img>
+          <img id="wave" src={waveType} alt="wave"></img>
         </div>
 
         <div className="contentBox">

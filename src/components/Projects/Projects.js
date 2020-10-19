@@ -8,7 +8,6 @@ import zakopane from '../../img/zakopane.jpg';
 import order from '../../img/order-food.jpg';
 import { useTranslation } from 'react-i18next';
 
-
 const Projects = () => {
   const { t } = useTranslation();
   document.getElementsByTagName('body')[0].style.overflow = 'auto';

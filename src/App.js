@@ -6,9 +6,9 @@ import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 
-import {  Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import { CSSTransition,  } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import { gsap, TimelineLite } from 'gsap';
 
 const routes = [
@@ -24,7 +24,7 @@ const tl = new TimelineLite();
 function App() {
   gsap.registerPlugin(TimelineLite);
 
-  const onEnter = (node) => { 
+  const onEnter = (node) => {
     if (
       node.children[0].className === 'Skills' ||
       node.children[0].className === 'Projects'
@@ -74,7 +74,6 @@ function App() {
               classNames="page"
               unmountOnExit
               onEnter={onEnter}
-            
             >
               <div className="page">
                 <Component />
@@ -83,7 +82,6 @@ function App() {
           )}
         </Route>
       ))}
-
     </div>
   );
 }
