@@ -292,11 +292,9 @@ const About = () => {
                 <h6>{t('Myself.1')}</h6>
               </div>
               <p>{t('Graduated.1')}</p>
-              <div className="cv-box">
+              <div className="btnContent">
                 <a
                   href="https://gofile.io/d/8pLsOb"
-                  className="download-cv"
-                  id="cv"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

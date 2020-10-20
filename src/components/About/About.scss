@@ -47,27 +47,11 @@
         // border: 2px solid green;
         width: 50%;
 
-        .btnContent {
-          padding: 20px 50px;
-          border-radius: 30px;
-          color: #fff;
-          border: none;
-          background: linear-gradient(
-            160deg,
-            rgba(199, 169, 113, 1) 0%,
-            rgba(222, 199, 155, 1) 100%
-          );
-
-          transition: 0.3s;
-
-          &:hover {
-            cursor: pointer;
-            opacity: 0.8;
-          }
-        }
-
         .about-details {
           text-align: center;
+          // display: flex;
+          // flex-direction: column;
+          // align-items: center;
 
           .about-heading {
             text-align: center;
@@ -87,64 +71,41 @@
               color: #dec79b;
             }
           }
+
           p {
             color: #fff;
             font-size: 20px;
             text-align: center;
+            margin-bottom: 40px;
           }
 
-          //CV BUTTON
-          .cv-box {
-            margin-top: 3rem;
+          // CV BUTTON
+          .btnContent {
+            font-weight: bold;
+            margin-top: 40px;
+            font-size: 18px;
+            padding: 20px 50px;
+            border-radius: 30px;
+            color: #fff;
+            border: none;
+            width: 250px;
+            margin: 0px auto;
 
             a {
               color: #fff;
-              position: relative;
-              display: inline-block;
-              cursor: pointer;
-              outline: none;
-              border: 0;
-              vertical-align: middle;
-              text-decoration: none;
-              font-size: inherit;
-              font-family: inherit;
-              letter-spacing: 2px;
+            }
 
-              &.download-cv {
-                font-weight: 600;
-                font-size: 0.9rem;
-                text-transform: uppercase;
-                padding: 1.25em 2em;
-                background: #c7a971;
-                border: 2px solid #caa35a;
-                border-radius: 0.75em;
-                transform-style: preserve-3d;
-                transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
-                  background 150ms cubic-bezier(0, 0, 0.58, 1);
-                &::before {
-                  position: absolute;
-                  content: '';
-                  width: 100%;
-                  height: 100%;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background: #af8942;
-                  border-radius: inherit;
-                  box-shadow: 0 0 0 1px #caa35a, 0 0.325em 0 0 #c7a971;
-                  transform: translate3d(0, 0.75em, -1em);
-                  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
-                    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
-                }
-                &:hover {
-                  background: #af8942;
-                  transform: translate(0, 0.25em);
-                  &::before {
-                    transform: translate3d(0, 0.5em, -1em);
-                  }
-                }
-              }
+            background: linear-gradient(
+              160deg,
+              rgba(199, 169, 113, 1) 0%,
+              rgba(222, 199, 155, 1) 100%
+            );
+
+            transition: 0.3s;
+
+            &:hover {
+              cursor: pointer;
+              opacity: 0.8;
             }
           }
         }
@@ -259,15 +220,13 @@
             }
             p {
               font-size: 19px;
+              margin-bottom: 30px;
             }
 
             //CV BUTTON
-            .cv-box {
-              a {
-                &.download-cv {
-                  padding: 15px 25px;
-                }
-              }
+            .btnContent {
+              font-size: 17px;
+              width: 220px;
             }
           }
         }
@@ -305,17 +264,14 @@
             }
             p {
               font-size: 17px;
+              margin-bottom: 20px;
             }
 
             //CV BUTTON
-            .cv-box {
-              margin-top: 1.7rem;
-
-              a {
-                &.download-cv {
-                  padding: 8px 12px;
-                }
-              }
+            .btnContent {
+              font-size: 16px;
+              padding: 15px;
+              width: 150px;
             }
           }
         }
