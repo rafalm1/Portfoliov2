@@ -289,3 +289,18 @@
     }
   }
 }
+
+@media (max-width: 420px) {
+  .About {
+    .aboutContainer {
+      .contentBox {
+        margin-top: 100px;
+        .rightContent {
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
