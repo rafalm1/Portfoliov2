@@ -243,7 +243,7 @@
       }
 
       .contentBox {
-        margin-top: 120px;
+        margin-top: 130px;
         padding: 10px;
         flex-direction: column-reverse;
 
@@ -282,7 +282,7 @@
           width: 80%;
 
           svg {
-            width: 82%;
+            width: 80%;
           }
         }
       }
@@ -290,11 +290,11 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-height: 550px) {
   .About {
     .aboutContainer {
       .contentBox {
-        margin-top: 100px;
+        margin-top: 70px;
         .rightContent {
           svg {
             display: none;
