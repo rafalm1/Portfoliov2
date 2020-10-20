@@ -83,7 +83,6 @@ function App() {
           )}
         </Route>
       ))}
-      <Redirect to="/" />
     </div>
   );
 }
