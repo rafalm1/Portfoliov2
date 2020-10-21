@@ -6,7 +6,7 @@ import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import { CSSTransition } from 'react-transition-group';
 import { gsap, TimelineLite } from 'gsap';
