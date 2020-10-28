@@ -9,18 +9,33 @@
       content="Portfolio Front End Developer Rafał Małyszko"
     />
 
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
     />
-    <script
-      src="https://kit.fontawesome.com/d6c54b7248.js"
-      crossorigin="anonymous"
-    ></script>
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+    
 
     <title>Rafał Małyszko - Portfolio</title>
   </head>
   <body>
     <div id="root"></div>
+
+    <script
+      src="https://kit.fontawesome.com/d6c54b7248.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </body>
+
+
 </html>
