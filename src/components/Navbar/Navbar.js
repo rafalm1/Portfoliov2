@@ -81,7 +81,7 @@ const Navbar = () => {
             {t('About.1')}
           </NavLink>
         </li>
-
+        {/* 
         <li>
           <NavLink
             to="/projects"
@@ -108,7 +108,7 @@ const Navbar = () => {
           >
             {t('Contact.1')}
           </NavLink>
-        </li>
+        </li> */}
         <button className="langBtn" onClick={() => changeLang('en')}>
           EN
         </button>
