@@ -42,6 +42,7 @@ nav {
     -webkit-text-stroke-width: 2px;
     font-size: 40px;
     margin-left: 20px;
+    user-select: none;
 
     @include mobile {
       font-size: 30px;
@@ -54,6 +55,7 @@ nav {
     border: none;
     margin: 0 10px;
     cursor: pointer;
+    user-select: none;
 
     &:focus {
       outline: 0;
@@ -137,6 +139,7 @@ nav {
       text-transform: uppercase;
       font-family: Oswald, sans-serif;
       margin-right: 10px;
+      user-select: none;
 
       a {
         font-family: 'Roboto', sans-serif;

@@ -46,6 +46,7 @@
       .leftContent {
         // border: 2px solid green;
         width: 50%;
+        user-select: none;
 
         .about-details {
           text-align: center;
@@ -248,7 +249,6 @@
         flex-direction: column-reverse;
 
         .leftContent {
-          width: 100%;
 
           .about-details {
             .about-heading {
