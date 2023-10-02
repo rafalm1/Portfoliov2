@@ -73,6 +73,10 @@
   }
 }
 
+.img-fit {
+  object-fit: cover;
+}
+
 @media (max-width: 900px) {
   .Skills {
     .skills-container {

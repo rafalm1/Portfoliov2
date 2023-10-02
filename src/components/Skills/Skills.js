@@ -2,12 +2,17 @@ import React from 'react';
 
 import './Skills.scss';
 import wordpress from '../../img/wordpress.png';
+import vue from '../../img/vue.png';
+import nuxt from '../../img/nuxt.png';
 import html5 from '../../img/html5.png';
 import css3 from '../../img/css3.png';
 import sass from '../../img/sass.png';
 import js from '../../img/js.png';
 import jquery from '../../img/jquery.png';
 import react from '../../img/react.png';
+import threejs from '../../img/threejs.png';
+import typescript from '../../img/typescript.png';
+import figma from '../../img/figma.png';
 import git from '../../img/git.png';
 import firebase from '../../img/firebase.png';
 import jira from '../../img/jira.png';
@@ -26,6 +31,18 @@ const Skills = () => {
         <div className="my-skills">
           <div className="skill">
             <div className="icon-container">
+              <img src={vue} alt="skill" />
+            </div>
+            <h2>Vue</h2>
+          </div>
+          <div className="skill">
+            <div className="icon-container">
+              <img src={nuxt} alt="skill" />
+            </div>
+            <h2>Nuxt</h2>
+          </div>
+          <div className="skill">
+            <div className="icon-container">
               <img src={react} alt="skill" />
             </div>
             <h2>React</h2>
@@ -35,6 +52,12 @@ const Skills = () => {
               <img src={js} alt="skill" />
             </div>
             <h2>JavaScript</h2>
+          </div>
+          <div className="skill">
+            <div className="icon-container">
+              <img src={typescript} alt="skill" />
+            </div>
+            <h2>Typescript</h2>
           </div>
           <div className="skill">
             <div className="icon-container">
@@ -54,7 +77,12 @@ const Skills = () => {
             </div>
             <h2>Sass</h2>
           </div>
-
+          <div className="skill">
+            <div className="icon-container">
+              <img src={threejs} alt="skill" />
+            </div>
+            <h2>Three.js</h2>
+          </div>
           <div className="skill">
             <div className="icon-container">
               <img src={jquery} alt="skill" />
@@ -84,6 +112,12 @@ const Skills = () => {
               <img src={jira} alt="skill" />
             </div>
             <h2>Jira</h2>
+          </div>
+          <div className="skill">
+            <div className="icon-container">
+              <img src={figma} alt="skill" className="img-fit"/>
+            </div>
+            <h2>Figma</h2>
           </div>
         </div>
         <a href="https://www.iconfinder.com/Flatart">Icons by Flatart</a>
