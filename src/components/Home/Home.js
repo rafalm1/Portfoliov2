@@ -121,9 +121,9 @@ const Home = () => {
               </svg>
             )}
             <h3>Front End Developer</h3>
-            {/* <button className="btnContent" onClick={redirectProjects}>
+            <button className="btnContent" onClick={redirectProjects}>
               {t('View.1')}
-            </button> */}
+            </button>
           </div>
           <div className="rightContent">
             <svg
