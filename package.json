@@ -1,5 +1,6 @@
 {
-  "name": "portfolio",
+  "name": "rafal-malyszko-portoflio-v2",
+  "author": "Rafal Malyszko",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
