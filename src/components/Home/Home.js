@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import blob from '../../svg/blob.svg';
-import './Home.scss';
-import { useTranslation } from 'react-i18next';
-import { useHistory } from 'react-router-dom';
-import { Wave } from '../Wave';
+import blob from "../../svg/blob.svg";
+import "./Home.scss";
+import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
+import { Wave } from "../Wave";
 
 const Home = () => {
   const { t } = useTranslation();
   const waveType = Wave();
   const history = useHistory();
   const redirectProjects = () => {
-    history.push('/projects');
+    history.push("/projects");
   };
 
   var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
@@ -28,7 +28,7 @@ const Home = () => {
 
         <div className="contentBox">
           <div className="leftContent">
-            <h2>{t('Hello.1')}</h2>
+            <h2>{t("Hello.1")}</h2>
             {isIE11 ? (
               <h2>Rafał Małyszko</h2>
             ) : (
@@ -120,9 +120,9 @@ const Home = () => {
                 />
               </svg>
             )}
-            <h3>Front End Developer</h3>
+            <h3>Frontend Developer</h3>
             <button className="btnContent" onClick={redirectProjects}>
-              {t('View.1')}
+              {t("View.1")}
             </button>
           </div>
           <div className="rightContent">
