@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import './About.scss';
-import blob2 from '../../svg/blob2.svg';
-import { useTranslation } from 'react-i18next';
-import { Wave } from '../Wave';
+import "./About.scss";
+import blob2 from "../../svg/blob2.svg";
+import { useTranslation } from "react-i18next";
+import { Wave } from "../Wave";
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const cvLink = i18n.language === "pl" ? "" : "";
 
   const waveType = Wave();
 
@@ -288,17 +289,13 @@ const About = () => {
           <div className="leftContent">
             <div className="about-details" id="about">
               <div className="about-heading">
-                <h1>{t('Aboutme.1')}</h1>
-                <h6>{t('Myself.1')}</h6>
+                <h1>{t("Aboutme.1")}</h1>
+                <h6>{t("Myself.1")}</h6>
               </div>
-              <p>{t('Graduated.1')}</p>
+              <p>{t("Graduated.1")}</p>
               <div className="btnContent">
-                <a
-                  href="https://gofile.io/d/8pLsOb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('CV.1')}
+                <a href={cvLink} target="_blank" rel="noopener noreferrer">
+                  {t("CV.1")}
                 </a>
               </div>
             </div>

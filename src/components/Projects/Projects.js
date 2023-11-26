@@ -1,16 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import './Projects.scss';
-import foody from '../../img//foody.jpg';
-import finder from '../../img//finder.jpg';
-import builder from '../../img/builder.jpg';
-import zakopane from '../../img/zakopane.jpg';
-import order from '../../img/order-food.jpg';
-import { useTranslation } from 'react-i18next';
+import "./Projects.scss";
+import foody from "../../img//foody.jpg";
+import finder from "../../img//finder.jpg";
+import builder from "../../img/builder.jpg";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
   const { t } = useTranslation();
-  document.getElementsByTagName('body')[0].style.overflow = 'auto';
+  document.getElementsByTagName("body")[0].style.overflow = "auto";
 
   return (
     <div className="Projects" id="proj">
@@ -20,14 +18,14 @@ const Projects = () => {
             <h6>HTML5 CSS3 SASS</h6>
             <img src={foody} alt="project"></img>
             <h2>Food Restaurant App</h2>
-            <p>{t('Foody.1')}</p>
+            <p>{t("Foody.1")}</p>
             <a
               href="https://kind-morse-bbc4ac.netlify.app/"
               className="cta"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('Live.1')}
+              {t("Live.1")}
             </a>
             <a
               href="https://github.com/1haker/food-app"
@@ -35,21 +33,21 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('Github.1')}
+              {t("Github.1")}
             </a>
           </div>
           <div className="project">
             <h6>JAVASCRIPT HTML5 CSS3 SASS</h6>
             <img src={finder} alt="project"></img>
             <h2>Food Finder</h2>
-            <p>{t('Foodfinder.1')}</p>
+            <p>{t("Foodfinder.1")}</p>
             <a
               href="https://fervent-pare-ac13e2.netlify.app/"
               className="cta"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('Live.1')}
+              {t("Live.1")}
             </a>
             <a
               href="https://github.com/1haker/food-finder"
@@ -57,21 +55,21 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('Github.1')}
+              {t("Github.1")}
             </a>
           </div>
           <div className="project">
             <h6>REACT JAVASCRIPT HTML5 CSS3 SASS</h6>
             <img src={builder} alt="project"></img>
             <h2>Food Builder</h2>
-            <p>{t('Foodbuilder.1')}</p>
+            <p>{t("Foodbuilder.1")}</p>
             <a
               href="https://food-builder-17e1e.web.app/"
               className="cta"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('Live.1')}
+              {t("Live.1")}
             </a>
             <a
               href="https://github.com/1haker/food-builder"
@@ -79,51 +77,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('Github.1')}
-            </a>
-          </div>
-          <div className="project">
-            <h6>WordPress ELEMENTOR</h6>
-            <img src={zakopane} alt="project"></img>
-            <h2>Zakopane App</h2>
-            <p>{t('Zakopane.1')}</p>
-            <a
-              href="https://1haker.github.io/zakopane-app/"
-              className="cta"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('Live.1')}
-            </a>
-            <a
-              href="https://github.com/1haker/zakopane-app"
-              className="cta github"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('Github.1')}
-            </a>
-          </div>
-          <div className="project">
-            <h6>WordPress THEMIFY</h6>
-            <img src={order} alt="project"></img>
-            <h2>Order Food</h2>
-            <p>{t('Orderfood.1')}</p>
-            <a
-              href="https://1haker.github.io/Order-Food/"
-              className="cta"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('Live.1')}
-            </a>
-            <a
-              href="https://github.com/1haker/Order-Food"
-              className="cta github"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('Github.1')}
+              {t("Github.1")}
             </a>
           </div>
         </div>

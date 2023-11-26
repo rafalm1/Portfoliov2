@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { useRef } from "react";
 
-import './Contact.scss';
-import { useTranslation } from 'react-i18next';
-import emailjs from 'emailjs-com';
-import { Wave } from '../Wave';
+import "./Contact.scss";
+import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
+import { Wave } from "../Wave";
 
 const Contact = () => {
+  const form = useRef();
   const { t } = useTranslation();
   const waveType = Wave();
 
   const toggleToastSuccess = () => {
-    const toastSuccess = document.getElementById('toastSuccess');
-    toastSuccess.classList.toggle('change');
+    const toastSuccess = document.getElementById("toastSuccess");
+    toastSuccess.classList.toggle("change");
   };
 
   const toggleToastError = () => {
-    const toastError = document.getElementById('toastError');
-    toastError.classList.toggle('change');
+    const toastError = document.getElementById("toastError");
+    toastError.classList.toggle("change");
   };
 
   const sendEmail = (e) => {
@@ -24,10 +25,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'gmail',
-        'template_8cdhapo',
-        e.target,
-        'user_ibQPgKofW8aW6TOe9mrM3'
+        "service_umrsmi3",
+        "template_byvyuts",
+        form.current,
+        "MJmlzSYDuHu54y0AV"
       )
       .then(
         (result) => {
@@ -51,11 +52,11 @@ const Contact = () => {
         <div className="contentBox">
           <div className="leftContent">
             <div className="container">
-              <form id="contactForm" onSubmit={sendEmail}>
-                <h3>{t('Contactform.1')}</h3>
+              <form ref={form} id="contactForm" onSubmit={sendEmail}>
+                <h3>{t("Contactform.1")}</h3>
                 <fieldset>
                   <input
-                    placeholder={t('Yourname.1')}
+                    placeholder={t("Yourname.1")}
                     name="name"
                     type="text"
                     tabIndex="1"
@@ -65,7 +66,7 @@ const Contact = () => {
                 <fieldset>
                   <input
                     name="email"
-                    placeholder={t('Youremail.1')}
+                    placeholder={t("Youremail.1")}
                     type="email"
                     tabIndex="2"
                     required
@@ -74,24 +75,20 @@ const Contact = () => {
                 <fieldset>
                   <textarea
                     name="message"
-                    placeholder={t('Typemsg.1')}
+                    placeholder={t("Typemsg.1")}
                     type="message"
                     tabIndex="5"
                     required
                   ></textarea>
                 </fieldset>
                 <fieldset>
-                  <input type="submit" value={t('Submit.1')}></input>
+                  <input type="submit" value={t("Submit.1")}></input>
                 </fieldset>
               </form>
             </div>
           </div>
           <div className="rightContent">
             <div className="info">
-              <div className="info-row">
-                <i className="fas fa-phone-alt"></i>
-                <span>797 205 937</span>
-              </div>
               <div className="info-row">
                 <i className="fas fa-envelope"></i>
                 <span>rm.rafalmalyszko@gmail.com</span>
@@ -473,11 +470,11 @@ const Contact = () => {
         </div>
       </div>
       <div id="toastSuccess">
-        {t('MsgSend.1')}
+        {t("MsgSend.1")}
         <i className="fas fa-times" onClick={toggleToastSuccess}></i>
       </div>
       <div id="toastError">
-        {t('MsgError.1')}
+        {t("MsgError.1")}
         <i className="fas fa-times" onClick={toggleToastError}></i>
       </div>
     </div>
