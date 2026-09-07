@@ -3,6 +3,9 @@
   "author": "Rafal Malyszko",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.15.0"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -12,15 +15,15 @@
     "i18next": "^19.8.2",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-http-backend": "^1.0.21",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.1",
     "react-i18next": "^11.7.3",
     "react-responsive": "^8.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "react-transition-group": "^4.4.1"
+    "react-scripts": "^5.0.1",
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.93.2"
   },
   "scripts": {
     "start": "react-scripts start",
