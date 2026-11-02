@@ -1,6 +1,13 @@
 # Wdrożenie na Netlify
 
-Strona działa na Netlify (https://rafalmalyszko.netlify.app) za darmo:
+Portfolio składa się z dwóch stron na Netlify
+
+| Strona                              | Projekt       | Co to jest                                                    |
+| ----------------------------------- | ------------- | ------------------------------------------------------------- |
+| https://rafalmalyszko.netlify.app   | `Portfoliov3` | Laptop 3D, czyli strona, którą widzą odwiedzający             |
+| https://rafalmalyszkov2.netlify.app | `Portfoliov2` | Ta strona, wyświetlana w ramce (iframe) na ekranie laptopa 3D |
+
+**Ta instrukcja wdraża `Portfoliov2` na `rafalmalyszkov2`.** Laptop 3D od razu pokaże nową wersję, bez żadnych zmian w `Portfoliov3`.
 
 - **Frontend** to zbudowane pliki z `dist/`.
 - **Dane o doświadczeniu** wysyła funkcja Netlify `netlify/functions/experience.ts` pod adresem `/api/experience`.
@@ -20,21 +27,27 @@ Wszystkie komendy uruchamiasz w folderze `Portfoliov2` (PowerShell albo terminal
 npx netlify-cli login
 ```
 
-Otworzy się przeglądarka. Zaloguj się tym samym kontem, na którym jest `rafalmalyszko.netlify.app`.
+Otworzy się przeglądarka. Kliknij **Authorize** na koncie, na którym masz obie strony.
 
-### 2. Podłącz projekt do istniejącej strony
+### 2. Podłącz projekt do strony `rafalmalyszkov2`
 
 ```powershell
-npx netlify-cli link
+npx netlify-cli link --name rafalmalyszkov2
 ```
 
-Wybierz opcję z listy stron (np. „Search by full or partial project name”) i wskaż stronę `rafalmalyszko`. Powstanie folder `.netlify/`, który git ignoruje.
+Uważaj, żeby to było **`rafalmalyszkov2`**, a nie `rafalmalyszko` (to laptop 3D). Jeśli terminal nie znajdzie strony, uruchom samo `npx netlify-cli link` i wybierz ją z listy. Powstanie folder `.netlify/`, który git ignoruje.
 
-### 3. Wyłącz automatyczne budowanie z GitHuba
+### 3. Wyłącz automatyczne budowanie z GitHuba (przeglądarka)
 
-Obecna strona (laptop 3D) najpewniej buduje się automatycznie z repo `Portfoliov3`. Gdyby tak zostało, każdy push do `Portfoliov3` nadpisałby nową stronę starą.
+```powershell
+npx netlify-cli open:admin
+```
 
-W panelu Netlify: **Site configuration → Build & deploy → Continuous deployment**, a potem **Stop builds** albo **Unlink repository**.
+Otworzy się panel strony `rafalmalyszkov2`. Stara v2 najpewniej budowała się automatycznie z repo `Portfoliov2` na GitHubie. Gdyby tak zostało, Netlify po każdym `git push` próbowałby zbudować stronę bez `content/portfolio.json`.
+
+Wejdź w **Site configuration → Build & deploy → Continuous deployment** i kliknij **Stop builds**. Jeśli nie ma tam podpiętego repo, nic nie rób.
+
+Ustawień strony `rafalmalyszko` (laptop 3D) nie zmieniasz. Może dalej budować się z repo `Portfoliov3`.
 
 ### 4. Wdrożenie próbne (podgląd)
 
@@ -42,7 +55,7 @@ W panelu Netlify: **Site configuration → Build & deploy → Continuous deploym
 npm run deploy:preview
 ```
 
-Na końcu dostaniesz link w stylu `https://<coś>--rafalmalyszko.netlify.app`. To podgląd, a obecna strona się nie zmienia. Sprawdź na nim:
+Na końcu dostaniesz **Draft URL** w stylu `https://<coś>--rafalmalyszkov2.netlify.app`. To podgląd, a obecna strona się nie zmienia. Sprawdź na nim:
 
 - stronę główną i przełączanie PL/EN,
 - zakładkę **Doświadczenie** (dane muszą się wczytać),
@@ -55,9 +68,9 @@ Na końcu dostaniesz link w stylu `https://<coś>--rafalmalyszko.netlify.app`. T
 npm run deploy
 ```
 
-Od teraz pod https://rafalmalyszko.netlify.app jest nowa strona.
+Od teraz nowa wersja jest pod https://rafalmalyszkov2.netlify.app, a laptop 3D na https://rafalmalyszko.netlify.app pokazuje ją na ekranie. Odśwież laptopa z Ctrl+F5, żeby przeglądarka nie pokazała starej wersji z pamięci.
 
-**Wycofanie zmian:** w panelu Netlify w zakładce **Deploys** kliknij poprzednie wdrożenie (stary laptop 3D), a potem **Publish deploy**. Wraca w kilka sekund.
+**Wycofanie zmian:** uruchom `npx netlify-cli open:admin`, w zakładce **Deploys** kliknij poprzednie wdrożenie (stara v2), a potem **Publish deploy**. Wraca w kilka sekund.
 
 ---
 

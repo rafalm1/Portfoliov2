@@ -95,10 +95,10 @@ cd /srv/portfolio
 mkdir -p content
 ```
 
-**Dane o doświadczeniu.** Wyślij je z Windowsa, w PowerShellu na swoim komputerze:
+**Dane o doświadczeniu.** Wyślij je z Windowsa, w PowerShellu na swoim komputerze, w folderze `Portfoliov2`:
 
 ```powershell
-scp C:\Users\nowak\AllProjects\Portfolio\Portfoliov2\content\portfolio.json rafal@IP_SERWERA:/srv/portfolio/content/
+scp content\portfolio.json rafal@IP_SERWERA:/srv/portfolio/content/
 ```
 
 **Konfiguracja `.env`.** Z powrotem na serwerze:
@@ -201,7 +201,7 @@ bash deploy/update.sh
 **Zmiana danych o doświadczeniu** (edytujesz lokalnie `content/portfolio.json`):
 
 ```powershell
-scp C:\Users\nowak\AllProjects\Portfolio\Portfoliov2\content\portfolio.json rafal@IP_SERWERA:/srv/portfolio/content/
+scp content\portfolio.json rafal@IP_SERWERA:/srv/portfolio/content/
 ssh rafal@IP_SERWERA "sudo systemctl restart portfolio"
 ```
 

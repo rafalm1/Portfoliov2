@@ -6,12 +6,12 @@ export const illustrationShadow = keyframes`
 `;
 
 export const Home = styled.section`
-  min-height: calc(100vh - 140px);
+  flex: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   align-items: center;
   gap: 8vw;
-  padding: 4vh 0 12vh;
+  padding: clamp(16px, 3vh, 48px) 0;
 
   @media (max-width: 850px) {
     grid-template-columns: 1fr;
@@ -61,7 +61,7 @@ export const Actions = styled.div`
   display: flex;
   align-items: center;
   gap: 22px;
-  margin-top: 36px;
+  margin-top: clamp(20px, 4vh, 36px);
 `;
 
 export const PrimaryButton = styled.button`
