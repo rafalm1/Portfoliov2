@@ -1,0 +1,86 @@
+{
+  "profile": {
+    "name": "Rafał Małyszko",
+    "title": "Frontend Developer",
+    "experience": "6 years",
+    "summary": "Frontend Developer with 6 years of experience building production web and mobile applications with Vue, React, and TypeScript. Experienced in frontend architecture, design systems, testing, performance optimization, responsive interfaces, and modernizing legacy applications.",
+    "email": "rm.rafalmalyszko@gmail.com",
+    "languages": ["Polish", "English"]
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "ai": "AI assistant",
+    "contact": "Contact",
+    "label": "Main navigation",
+    "homeLabel": "Go to home"
+  },
+  "home": {
+    "eyebrow": "SENIOR Frontend Developer",
+    "greeting": "Hello, I'm",
+    "role": "Senior Frontend Developer",
+    "summary": "Senior Frontend Developer with 6+ years of commercial experience working with React, Vue, and Angular. I bring more to a team than framework, JavaScript, HTML, and CSS knowledge: practical judgment around UI/UX, SEO, performance, responsiveness, and what actually works for users. Beyond that, I simply enjoy this work, so I keep up with new technologies and, above all, with developments in AI.",
+    "ask": "Check my experience",
+    "illustrationAlt": "Developer thinking beside a code interface"
+  },
+  "experience": {
+    "eyebrow": "EXPERIENCE",
+    "title": "My career path",
+    "collapse": "Collapse all",
+    "expand": "Expand all",
+    "projects": "PROJECTS",
+    "loading": "Loading experience...",
+    "error": "Could not load experience. Please try again later."
+  },
+  "skills": {
+    "eyebrow": "TOOLKIT",
+    "title": "Explore my stack"
+  },
+  "ai": {
+    "eyebrow": "KNOWLEDGE INTERFACE",
+    "title": "Ask about my experience.",
+    "description": "The assistant uses approved portfolio data and only calls an AI model when a question goes beyond the basics.",
+    "api": "API",
+    "local": "",
+    "placeholder": "Ask about experience, technologies or approach",
+    "send": "Send",
+    "you": "YOU",
+    "assistant": "",
+    "generating": "Generating...",
+    "welcome": "Hi. Ask me about my experience, technologies, projects, or approach to frontend development.",
+    "suggestions": [
+      "Which frontend frameworks have I used?",
+      "What are my strongest technologies?",
+      "Tell me about the most interesting project in my career.",
+      "Why is it worth hiring me?"
+    ],
+    "error": "The assistant is temporarily unavailable. Please try again later."
+  },
+  "about": {
+    "eyebrow": "BEYOND CODE",
+    "title": "A little about me",
+    "paragraphs": [
+      "I've always been drawn to computers. It started with gaming and online communities like Reddit, X, and Discord, later turned into studying Computer Science, and that's how I ended up in IT.",
+      "I like that the result of my work is visible right away — that's the best part.",
+      "I'm a fairly calm and introverted person. I don't need to be the loudest person in the room, but if I see a problem or have an idea that could improve something, I say so directly. I usually listen and analyse first, and only then speak up.",
+      "After work I'm still often at the computer — I'm into new tech, sports, football, and games. This isn't just an eight-hour job for me. I follow the internet, trends, and where the industry is heading on my own, simply because it interests me and I like knowing what's happening and where it's all going. That curiosity also matters in my work: it helps me tell short-lived hype apart from solutions that actually make sense.",
+      "I see AI as more than a ready-made tool for generating text or code. I'm interested in local LLMs, the differences between models, their capabilities, limitations, context, how they work, and their trade-offs.",
+      "With this many years in the industry and so many projects behind me, I can simply feel when something will work and when it won't — and that's where people have a huge advantage over AI."
+    ]
+  },
+  "contact": {
+    "eyebrow": "CONTACT",
+    "title": "Feel free to get in touch =D"
+  },
+  "status": {
+    "checking": "CHECKING",
+    "online": "ONLINE",
+    "offline": "OFFLINE"
+  },
+  "loader": {
+    "label": "Loading portfolio",
+    "status": "INITIALIZING EXPERIENCE"
+  }
+}

@@ -1,0 +1,20 @@
+# Deployed with the Netlify CLI from a local machine (see DEPLOY.md), never built from GitHub:
+# the experience data in content/portfolio.json is not in the repository.
+
+[build]
+  command = "npm run build:client"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/experience"
+  to = "/.netlify/functions/experience"
+  status = 200
+
+# Client-side routes (/experience, /about, ...) all render index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,86 @@
+{
+  "profile": {
+    "name": "Rafał Małyszko",
+    "title": "Frontend Developer",
+    "experience": "6 lat",
+    "summary": "Frontend Developer z 6-letnim doświadczeniem w tworzeniu produkcyjnych aplikacji webowych i mobilnych z wykorzystaniem Vue, React i TypeScript. Doświadczenie obejmuje architekturę frontendową, design systemy, testowanie, optymalizację wydajności, responsywne interfejsy oraz modernizację starszych aplikacji.",
+    "email": "rm.rafalmalyszko@gmail.com",
+    "languages": ["Polski", "Angielski"]
+  },
+  "nav": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "experience": "Doświadczenie",
+    "skills": "Umiejętności",
+    "ai": "Asystent AI",
+    "contact": "Kontakt",
+    "label": "Główna nawigacja",
+    "homeLabel": "Przejdź do strony głównej"
+  },
+  "home": {
+    "eyebrow": "SENIOR Frontend Developer",
+    "greeting": "Cześć, jestem",
+    "role": "Senior Frontend Developer",
+    "summary": "Senior Frontend Developer z ponad 6-letnim komercyjnym doświadczeniem w pracy z React, Vue i Angular. Wnoszę do zespołu nie tylko znajomość frameworków, JavaScriptu, HTML i CSS, ale też praktyczne rozumienie UI/UX, SEO, wydajności, responsywności oraz tego, co rzeczywiście działa dla użytkowników. Poza tym po prostu lubię to robić, więc jestem na bieżąco z nowymi technologiami, a przede wszystkim rozwojem AI.",
+    "ask": "Sprawdź moje doświadczenie",
+    "illustrationAlt": "Programista zastanawiający się obok interfejsu z kodem"
+  },
+  "experience": {
+    "eyebrow": "DOŚWIADCZENIE",
+    "title": "Moja ścieżka zawodowa",
+    "collapse": "Zwiń wszystko",
+    "expand": "Rozwiń wszystko",
+    "projects": "PROJEKTY",
+    "loading": "Wczytywanie doświadczenia...",
+    "error": "Nie udało się wczytać doświadczenia. Spróbuj ponownie później."
+  },
+  "skills": {
+    "eyebrow": "NARZĘDZIA",
+    "title": "Poznaj mój stack"
+  },
+  "ai": {
+    "eyebrow": "INTERFEJS WIEDZY",
+    "title": "Zapytaj o moje doświadczenie.",
+    "description": "Asystent korzysta z zatwierdzonych danych portfolio i używa modelu AI tylko wtedy, gdy pytanie wychodzi poza obszar podstawowych pytań.",
+    "api": "API",
+    "local": "",
+    "placeholder": "Zapytaj o doświadczenie, technologie lub podejście",
+    "send": "Wyślij",
+    "you": "TY",
+    "assistant": "",
+    "generating": "Generowanie...",
+    "welcome": "Cześć. Zapytaj mnie o moje doświadczenie, technologie, projekty lub podejście do tworzenia aplikacji frontendowych.",
+    "suggestions": [
+      "Z jakich frameworków frontendowych korzystałem?",
+      "Jakie są moje najmocniejsze technologie?",
+      "Opowiedz o najciekawszym projekcie w mojej karierze.",
+      "Dlaczego warto mnie zatrudnić?"
+    ],
+    "error": "Asystent jest chwilowo niedostępny. Spróbuj ponownie później."
+  },
+  "about": {
+    "eyebrow": "POZA KODEM",
+    "title": "Kilka słów o mnie",
+    "paragraphs": [
+      "Od zawsze ciągnęło mnie do komputerów. Zaczęło się od gamingu i internetowych community jak Reddit, X, Discord, a później przerodziło się w studia informatyczne i tak znalazłem się w świecie IT.",
+      "Podoba mi się, że efekt mojej pracy jest od razu widoczny i to jest w tym najlepsze.",
+      "Jestem raczej spokojną i introwertyczną osobą. Nie mam potrzeby być najgłośniejszy w pokoju, ale jeśli widzę problem albo mam pomysł, który może coś poprawić, mówię o tym wprost. Zwykle najpierw słucham i analizuję, a dopiero później zabieram głos.",
+      "Po pracy nadal często jestem przy komputerze — interesują mnie nowe rozwiązania, sport, piłka nożna i gry. To nie jest dla mnie tylko praca na osiem godzin. Sam z siebie śledzę internet, trendy i kierunki rozwoju branży, bo po prostu mnie to ciekawi i lubię wiedzieć, co się dzieje oraz dokąd to wszystko zmierza. Ta ciekawość ma też praktyczne znaczenie w mojej pracy, pomaga mi odróżniać chwilowy hype od rozwiązań, które naprawdę mogą mieć sens.",
+      "AI traktuję jako coś więcej niż gotowe narzędzie do generowania tekstu czy kodu. Interesują mnie lokalne LLM-y, różnice między modelami, ich możliwości, ograniczenia, kontekst, sposób działania i kompromisy.",
+      "Mając tyle lat doświadczenia w branży i wielu projektach po prostu czuję kiedy coś zadziała, a kiedy nie, tutaj człowiek ma ogromną przewagę nad AI."
+    ]
+  },
+  "contact": {
+    "eyebrow": "KONTAKT",
+    "title": "Śmiało, czekam na kontakt =D"
+  },
+  "status": {
+    "checking": "SPRAWDZANIE",
+    "online": "ONLINE",
+    "offline": "OFFLINE"
+  },
+  "loader": {
+    "label": "Ładowanie portfolio",
+    "status": "WCZYTYWANIE DOŚWIADCZENIA"
+  }
+}

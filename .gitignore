@@ -10,6 +10,8 @@
 
 # production
 /build
+/dist
+/server/dist
 
 # misc
 .DS_Store
@@ -23,3 +25,12 @@ yarn-debug.log*
 yarn-error.log*
 
 .vscode
+# real portfolio content and secrets (served by the API, never committed)
+/content
+.env
+
+# Local Netlify folder
+.netlify
+
+# Netlify CLI link to the site (local only)
+.netlify

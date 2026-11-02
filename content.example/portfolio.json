@@ -1,0 +1,39 @@
+{
+  "experience": {
+    "en": [
+      {
+        "company": "Example Company",
+        "role": "Frontend Developer",
+        "dates": "2024-01 - present",
+        "description": "Placeholder entry. The real experience lives in content/portfolio.json, which is not committed.",
+        "technologies": "React, Vue, TypeScript",
+        "projects": [{ "name": "Example project", "description": "Placeholder project description." }]
+      }
+    ],
+    "pl": [
+      {
+        "company": "Example Company",
+        "role": "Frontend Developer",
+        "dates": "2024-01 - obecnie",
+        "description": "Przykładowy wpis. Prawdziwe doświadczenie znajduje się w content/portfolio.json, który nie jest commitowany.",
+        "technologies": "React, Vue, TypeScript",
+        "projects": [{ "name": "Przykładowy projekt", "description": "Przykładowy opis projektu." }]
+      }
+    ]
+  },
+  "assistant": {
+    "context": {
+      "profile": { "name": "Example Developer", "role": "Frontend Developer" },
+      "skills": ["React", "Vue", "TypeScript"],
+      "experience": []
+    },
+    "faq": [
+      {
+        "id": "contact",
+        "aliases": ["contact", "email", "how to contact", "kontakt"],
+        "answer": "This is placeholder content. Add content/portfolio.json to use real answers.",
+        "answerPl": "To są przykładowe dane. Dodaj content/portfolio.json, żeby używać prawdziwych odpowiedzi."
+      }
+    ]
+  }
+}

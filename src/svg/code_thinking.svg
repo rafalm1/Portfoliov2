@@ -1,4 +1,74 @@
 <svg width="1083" height="450" viewBox="0 0 1083 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+	#shoe {
+		animation: shoe-rock 2s ease-in-out infinite alternate;
+		transform-origin: right center;
+		transform-box: fill-box;
+	}
+
+	#rect1 {
+		animation: block-one 10s linear infinite;
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+
+	#rect2 {
+		animation: block-two 10s linear infinite 1s;
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+
+	#rect3 {
+		animation: block-three 10s linear infinite 1s;
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+
+	#circle {
+		animation: bubble-float 8s ease-in-out infinite alternate;
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+
+	#boxes {
+		animation: boxes-drift 4s ease-in-out infinite alternate;
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+
+	@keyframes shoe-rock {
+		from { transform: rotate(10deg); }
+		to { transform: rotate(-2deg); }
+	}
+
+	@keyframes block-one {
+		0%, 100% { transform: translate(0, 0) rotate(0deg); }
+		33% { transform: translate(-15px, 130px) rotate(90deg); }
+		66% { transform: translate(120px, 20px) rotate(180deg); }
+	}
+
+	@keyframes block-two {
+		0%, 100% { transform: translate(0, 0) rotate(0deg); }
+		33% { transform: translate(-120px, -30px) rotate(-90deg); }
+		66% { transform: translate(-120px, 100px) rotate(-180deg); }
+	}
+
+	@keyframes block-three {
+		0%, 100% { transform: translate(0, 0) rotate(0deg); }
+		33% { transform: translate(130px, -100px) rotate(90deg); }
+		66% { transform: translate(20px, -130px) rotate(180deg); }
+	}
+
+	@keyframes bubble-float {
+		from { transform: translateY(0); }
+		to { transform: translateY(-150px); }
+	}
+
+	@keyframes boxes-drift {
+		from { transform: translateX(0); }
+		to { transform: translateX(-20px); }
+	}
+</style>
 <g id="code_thinking" clip-path="url(#clip0)">
 <g id="man-thinking">
 <path id="Vector" d="M77.591 390.495L52.772 388.84L61.045 426.069L89.173 414.487L77.591 390.495Z" fill="#FFB9B9"/>

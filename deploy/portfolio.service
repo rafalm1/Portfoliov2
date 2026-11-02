@@ -1,0 +1,17 @@
+[Unit]
+Description=Portfolio (Express API + built frontend)
+After=network.target ollama.service
+Wants=ollama.service
+
+[Service]
+Type=simple
+# Change to the Linux user that owns /srv/portfolio.
+User=rafal
+WorkingDirectory=/srv/portfolio
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node server/dist/server.js
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
