@@ -33,6 +33,18 @@ const sectionPaths: Record<Section, string> = {
 // The AI assistant is hidden until it has a production backend; set VITE_AI_ASSISTANT=true to bring it back.
 const isAiAssistantEnabled = import.meta.env.VITE_AI_ASSISTANT === 'true';
 
+// Visitors entering from the 3D laptop (?intro=0) have just watched its intro, so the entry loader is skipped.
+// Read once at startup (not in a state initializer, which StrictMode runs twice) and removed from the URL.
+function consumeSkipIntroParam() {
+  const url = new URL(window.location.href);
+  if (url.searchParams.get('intro') !== '0') return false;
+  url.searchParams.delete('intro');
+  window.history.replaceState({}, '', `${url.pathname}${url.search}`);
+  return true;
+}
+
+const shouldSkipIntro = consumeSkipIntroParam();
+
 function sectionFromPath(pathname: string): Section {
   const match = (Object.entries(sectionPaths) as Array<[Section, string]>).find(([, path]) => path === pathname);
   const section = match?.[0] ?? 'home';
@@ -84,7 +96,7 @@ function App() {
   const [language, setLanguage] = useState<'EN' | 'PL'>(() => languageFromUrl());
   const [input, setInput] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
-  const [isInitialLoading, setIsInitialLoading] = useState(true);
+  const [isInitialLoading, setIsInitialLoading] = useState(!shouldSkipIntro);
   const [apiStatus, setApiStatus] = useState<'checking' | 'online' | 'offline'>('checking');
   const [experience, setExperience] = useState<ExperienceByLocale | null>(null);
   const [experienceFailed, setExperienceFailed] = useState(false);

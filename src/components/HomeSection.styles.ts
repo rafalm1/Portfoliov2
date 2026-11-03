@@ -8,7 +8,7 @@ export const illustrationShadow = keyframes`
 export const Home = styled.section`
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
   align-items: center;
   gap: 8vw;
   padding: clamp(16px, 3vh, 48px) 0;
@@ -50,7 +50,7 @@ export const NameLogo = styled.img`
 `;
 
 export const Summary = styled.p`
-  max-width: 570px;
+  max-width: 575px;
   margin: 0;
   color: var(--muted);
   font-size: 18px;
