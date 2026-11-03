@@ -19,7 +19,8 @@ type Experience = {
   technologies: string;
   projects: Array<{ name: string; description: string }>;
 };
-type ExperienceByLocale = Record<'en' | 'pl', Experience[]>;
+type Education = { school: string; field: string; degree: string; dates: string };
+type ExperienceByLocale = Record<'en' | 'pl', Experience[]> & { education?: Record<'en' | 'pl', Education[]> };
 
 const sectionPaths: Record<Section, string> = {
   home: '/',
@@ -111,6 +112,7 @@ function App() {
   const copy = locale === 'pl' ? pl : en;
   const localizedProfile = copy.profile;
   const localizedExperience = experience?.[locale] ?? [];
+  const localizedEducation = experience?.education?.[locale] ?? [];
   const skillCloud = collectSkills(localizedExperience);
   const contentPlaceholder = experienceFailed ? copy.experience.error : copy.experience.loading;
 
@@ -445,6 +447,23 @@ function App() {
                 );
               })}
             </div>
+
+            {localizedEducation.length > 0 && (
+              <div className="education">
+                <p className="eyebrow">{copy.experience.education}</p>
+                {localizedEducation.map((item) => (
+                  <div className="education-entry" key={item.school}>
+                    <span>
+                      <strong>{item.school}</strong>
+                      <em>{item.dates}</em>
+                    </span>
+                    <span className="experience-technologies">
+                      <strong>{item.field}</strong>, {item.degree}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
           </section>
         )}
 

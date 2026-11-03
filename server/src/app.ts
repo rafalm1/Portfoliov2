@@ -7,7 +7,7 @@ import express from 'express';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import { z } from 'zod';
-import { experience, faq } from './data/portfolio.js';
+import { education, experience, faq } from './data/portfolio.js';
 import { findFaq, isPortfolioRelated } from './services/matcher.js';
 import { isOllamaAvailable, streamOllama, type OllamaUsage } from './services/ollama.js';
 
@@ -57,7 +57,7 @@ app.get('/api/health', async (_request, response) => {
 });
 
 app.get('/api/experience', (_request, response) => {
-  response.json(experience);
+  response.json({ ...experience, education });
 });
 
 app.post('/api/chat', chatLimiter, async (request, response) => {

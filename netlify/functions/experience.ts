@@ -4,6 +4,6 @@
 import content from '../../content/portfolio.json';
 
 export default async () =>
-  new Response(JSON.stringify(content.experience), {
+  new Response(JSON.stringify({ ...content.experience, education: content.education }), {
     headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=300' },
   });

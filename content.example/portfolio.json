@@ -7,7 +7,12 @@
         "dates": "2024-01 - present",
         "description": "Placeholder entry. The real experience lives in content/portfolio.json, which is not committed.",
         "technologies": "React, Vue, TypeScript",
-        "projects": [{ "name": "Example project", "description": "Placeholder project description." }]
+        "projects": [
+          {
+            "name": "Example project",
+            "description": "Placeholder project description."
+          }
+        ]
       }
     ],
     "pl": [
@@ -17,13 +22,39 @@
         "dates": "2024-01 - obecnie",
         "description": "Przykładowy wpis. Prawdziwe doświadczenie znajduje się w content/portfolio.json, który nie jest commitowany.",
         "technologies": "React, Vue, TypeScript",
-        "projects": [{ "name": "Przykładowy projekt", "description": "Przykładowy opis projektu." }]
+        "projects": [
+          {
+            "name": "Przykładowy projekt",
+            "description": "Przykładowy opis projektu."
+          }
+        ]
+      }
+    ]
+  },
+  "education": {
+    "en": [
+      {
+        "school": "Example University",
+        "field": "Computer Science",
+        "degree": "Bachelor",
+        "dates": "2016-09 - 2020-02"
+      }
+    ],
+    "pl": [
+      {
+        "school": "Przykładowa Uczelnia",
+        "field": "Informatyka",
+        "degree": "Inżynier",
+        "dates": "2016-09 - 2020-02"
       }
     ]
   },
   "assistant": {
     "context": {
-      "profile": { "name": "Example Developer", "role": "Frontend Developer" },
+      "profile": {
+        "name": "Example Developer",
+        "role": "Frontend Developer"
+      },
       "skills": ["React", "Vue", "TypeScript"],
       "experience": []
     },

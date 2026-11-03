@@ -14,9 +14,11 @@ const experienceSchema = z.object({
   technologies: z.string(),
   projects: z.array(projectSchema),
 });
+const educationSchema = z.object({ school: z.string(), field: z.string(), degree: z.string(), dates: z.string() });
 const faqSchema = z.object({ id: z.string(), aliases: z.array(z.string()), answer: z.string(), answerPl: z.string().optional() });
 const contentSchema = z.object({
   experience: z.object({ en: z.array(experienceSchema), pl: z.array(experienceSchema) }),
+  education: z.object({ en: z.array(educationSchema), pl: z.array(educationSchema) }),
   assistant: z.object({ context: z.record(z.unknown()), faq: z.array(faqSchema) }),
 });
 
@@ -34,5 +36,6 @@ function resolveContentFile() {
 const content = contentSchema.parse(JSON.parse(readFileSync(resolveContentFile(), 'utf8')));
 
 export const experience = content.experience;
+export const education = content.education;
 export const portfolioContext = content.assistant.context;
 export const faq = content.assistant.faq;

@@ -34,7 +34,8 @@
     "expand": "Rozwiń wszystko",
     "projects": "PROJEKTY",
     "loading": "Wczytywanie doświadczenia...",
-    "error": "Nie udało się wczytać doświadczenia. Spróbuj ponownie później."
+    "error": "Nie udało się wczytać doświadczenia. Spróbuj ponownie później.",
+    "education": "Wykształcenie"
   },
   "skills": {
     "eyebrow": "NARZĘDZIA",

@@ -237,6 +237,32 @@ const GlobalStyle = createGlobalStyle`
     padding: 24px 0 34px;
     border-bottom: 1px solid var(--line);
   }
+  /* Education below the jobs: same row layout as an experience entry, just not expandable. */
+  .education {
+    margin-top: 56px;
+  }
+  .education-entry {
+    display: grid;
+    grid-template-columns: 1fr 1fr 48px;
+    gap: 20px;
+    align-items: center;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .education-entry > span:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .education-entry > span:first-child strong {
+    color: var(--accent);
+    font-size: 18px;
+  }
+  .education-entry em {
+    color: var(--muted);
+    font: normal 16px 'DM Mono', monospace;
+  }
   .company-description {
     max-width: 900px;
     color: var(--ink);
@@ -575,6 +601,10 @@ const GlobalStyle = createGlobalStyle`
     .experience-chevron {
       grid-column: 2;
       grid-row: 1 / span 2;
+    }
+    .education-entry {
+      grid-template-columns: 1fr;
+      gap: 10px;
     }
     .page-section {
       padding: 4vh 0;

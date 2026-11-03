@@ -34,7 +34,8 @@
     "expand": "Expand all",
     "projects": "PROJECTS",
     "loading": "Loading experience...",
-    "error": "Could not load experience. Please try again later."
+    "error": "Could not load experience. Please try again later.",
+    "education": "Education"
   },
   "skills": {
     "eyebrow": "TOOLKIT",
