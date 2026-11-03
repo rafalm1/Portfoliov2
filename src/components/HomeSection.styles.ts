@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const illustrationShadow = keyframes`
   0%, 100% { filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .25)); }
@@ -46,7 +46,7 @@ const drawName = keyframes`
   to { stroke-dashoffset: 0; }
 `;
 
-export const NameLogo = styled.div`
+export const NameLogo = styled.div<{ $animate: boolean }>`
   display: block;
   width: min(100%, 620px);
   margin-bottom: 12px;
@@ -60,8 +60,13 @@ export const NameLogo = styled.div`
   path {
     stroke: var(--accent);
     stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: ${drawName} 2.5s ease forwards 1.5s;
+    stroke-dashoffset: ${({ $animate }) => ($animate ? 1 : 0)};
+    animation: ${({ $animate }) =>
+      $animate
+        ? css`
+            ${drawName} 2.5s ease forwards 1.5s
+          `
+        : 'none'};
   }
 
   @media (prefers-reduced-motion: reduce) {

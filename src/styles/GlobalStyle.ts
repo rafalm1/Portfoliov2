@@ -364,9 +364,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  .skills-section {
+    display: flex;
+    flex-direction: column;
+  }
   .skill-cloud-shell {
     position: relative;
-    height: 620px;
+    flex: 1;
+    min-height: 260px;
     overflow: hidden;
   }
   .skill-cloud-canvas {
@@ -581,15 +586,6 @@ const GlobalStyle = createGlobalStyle`
     }
     .menu-toggle.open span:last-child {
       transform: translateY(-4px) rotate(-45deg);
-    }
-    .skills-section {
-      display: flex;
-      flex-direction: column;
-    }
-    .skills-section .skill-cloud-shell {
-      flex: 1;
-      height: auto;
-      min-height: 260px;
     }
     .hero,
     .ai-section,
