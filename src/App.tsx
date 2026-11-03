@@ -89,6 +89,7 @@ function App() {
   const [experience, setExperience] = useState<ExperienceByLocale | null>(null);
   const [experienceFailed, setExperienceFailed] = useState(false);
   const [openExperience, setOpenExperience] = useState<Set<string>>(() => new Set());
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const mainRef = useRef<HTMLElement>(null);
   const wipeRef = useRef<HTMLDivElement>(null);
@@ -146,7 +147,24 @@ function App() {
     return () => window.removeEventListener('pointermove', handlePointerMove);
   }, []);
 
+  // Mobile menu: lock page scroll while it covers the screen, close it with Escape.
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMenuOpen(false);
+    };
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
   const navigate = (nextSection: Section) => {
+    setIsMenuOpen(false);
+
     const nextPath = sectionPaths[nextSection];
 
     if (window.location.pathname !== nextPath) {
@@ -277,7 +295,7 @@ function App() {
 
   return (
     <div className="app-shell">
-      {isInitialLoading && <EntryLoader onComplete={finishInitialLoading} label={copy.loader.label} status={copy.loader.status} />}
+      {isInitialLoading && <EntryLoader onComplete={finishInitialLoading} label={copy.loader.label} />}
 
       <div className="cursor-glow" ref={cursorGlowRef} aria-hidden="true" />
 
@@ -286,7 +304,7 @@ function App() {
           RM
         </button>
 
-        <nav className="nav-tabs" aria-label={copy.nav.label}>
+        <nav id="main-nav" className={`nav-tabs ${isMenuOpen ? 'open' : ''}`} aria-label={copy.nav.label}>
           {navItems.map((item) => (
             <button key={item.id} className={section === item.id ? 'active' : ''} onClick={() => navigate(item.id)}>
               {item.label}
@@ -296,6 +314,17 @@ function App() {
 
         <button className="language-toggle" onClick={toggleLanguage}>
           {language}
+        </button>
+
+        <button
+          className={`menu-toggle ${isMenuOpen ? 'open' : ''}`}
+          aria-expanded={isMenuOpen}
+          aria-controls="main-nav"
+          aria-label={isMenuOpen ? copy.nav.menuClose : copy.nav.menuOpen}
+          onClick={() => setIsMenuOpen((current) => !current)}
+        >
+          <span />
+          <span />
         </button>
       </header>
 

@@ -15,7 +15,9 @@
     "ai": "AI assistant",
     "contact": "Contact",
     "label": "Main navigation",
-    "homeLabel": "Go to home"
+    "homeLabel": "Go to home",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "home": {
     "eyebrow": "SENIOR Frontend Developer",
@@ -80,7 +82,6 @@
     "offline": "OFFLINE"
   },
   "loader": {
-    "label": "Loading portfolio",
-    "status": "INITIALIZING EXPERIENCE"
+    "label": "Loading portfolio"
   }
 }

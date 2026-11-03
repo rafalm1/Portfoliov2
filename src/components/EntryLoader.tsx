@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
-import logo from '../svg/logo.svg';
-import { LoaderBar, LoaderBrand, LoaderFrame, LoaderLogo, LoaderShell, LoaderStatus } from './EntryLoader.styles';
+import { LoaderBar, LoaderBrand, LoaderFrame, LoaderPrompt, LoaderShell } from './EntryLoader.styles';
 
 type EntryLoaderProps = {
   onComplete: () => void;
   label: string;
-  status: string;
 };
 
-export default function EntryLoader({ onComplete, label, status }: EntryLoaderProps) {
+export default function EntryLoader({ onComplete, label }: EntryLoaderProps) {
   const [leaving, setLeaving] = useState(false);
 
   useEffect(() => {
@@ -25,8 +23,9 @@ export default function EntryLoader({ onComplete, label, status }: EntryLoaderPr
     <LoaderShell $leaving={leaving} aria-label={label} role="status">
       <LoaderFrame>
         <LoaderBrand>RM / PORTFOLIO</LoaderBrand>
-        <LoaderLogo src={logo} alt="Rafał Małyszko" />
-        <LoaderStatus>{status}</LoaderStatus>
+        <LoaderPrompt aria-hidden="true">
+          &gt;<span>_</span>
+        </LoaderPrompt>
         <LoaderBar />
       </LoaderFrame>
     </LoaderShell>

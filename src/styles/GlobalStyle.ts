@@ -116,6 +116,9 @@ const GlobalStyle = createGlobalStyle`
     border-color: var(--line);
     font-family: 'DM Mono', monospace;
   }
+  .menu-toggle {
+    display: none;
+  }
 
   .eyebrow,
   .message-label,
@@ -497,17 +500,64 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media (max-width: 850px) {
+    /* Sticky bar with a burger; the menu opens as a full-screen list below it. */
     .topbar {
-      gap: 12px;
-      height: auto;
-      padding: 18px 0;
-      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: 72px;
+      gap: 10px;
+      margin: 0 -5vw;
+      padding: 0 5vw;
+      background: #111110;
+    }
+    .brand {
+      margin-right: auto;
     }
     .nav-tabs {
-      overflow-x: auto;
-      order: 3;
-      width: 100%;
-      margin: 0;
+      display: none;
+    }
+    .nav-tabs.open {
+      position: fixed;
+      inset: 72px 0 0;
+      z-index: 40;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 24px 5vw;
+      background: #111110;
+    }
+    .nav-tabs.open button {
+      padding: 14px 12px;
+      font-size: 24px;
+      text-align: left;
+    }
+    .menu-toggle {
+      display: grid;
+      place-content: center;
+      gap: 6px;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      background: transparent;
+      border: 1px solid var(--line);
+    }
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--ink);
+      transition: transform 0.2s ease;
+    }
+    .menu-toggle.open span:first-child {
+      transform: translateY(4px) rotate(45deg);
+    }
+    .menu-toggle.open span:last-child {
+      transform: translateY(-4px) rotate(-45deg);
+    }
+    /* Vertical swipes scroll the page, horizontal drags still rotate the skill cloud. */
+    .skill-cloud-canvas {
+      touch-action: pan-y;
     }
     .hero,
     .ai-section,
@@ -534,6 +584,20 @@ const GlobalStyle = createGlobalStyle`
   @media (max-width: 500px) {
     .app-shell {
       padding: 0 20px;
+    }
+    .topbar {
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+    .nav-tabs.open {
+      padding: 24px 20px;
+    }
+    .skill-cloud-shell {
+      height: 400px;
+    }
+    footer {
+      gap: 12px;
+      font-size: 12px;
     }
     .skills-grid {
       grid-template-columns: 1fr;

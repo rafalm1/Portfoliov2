@@ -1,5 +1,5 @@
-import { useMemo, useRef, type PointerEvent as ReactPointerEvent } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { useEffect, useMemo, useRef, type PointerEvent as ReactPointerEvent } from 'react';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Text } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -16,6 +16,10 @@ type SkillSphereProps = {
 };
 
 const RADIUS = 2.6;
+const CAMERA_FOV = 45;
+const CAMERA_DISTANCE = 6.2;
+// Room for the labels sticking out past the sphere's edge when fitting it into narrow (mobile) canvases.
+const LABEL_MARGIN = 0.4;
 const PANEL_COLOR = '#201f1e';
 const ACCENT_LIGHT = '#dec79b';
 const MUTED = '#b8b0a2';
@@ -51,6 +55,14 @@ function Scene({
   reduceMotion: boolean;
 }) {
   const groupRef = useRef<THREE.Group>(null);
+  const { camera, size } = useThree();
+  // The FOV is vertical, so on portrait canvases the camera backs off until the sphere fits horizontally.
+  const halfFovTan = Math.tan(THREE.MathUtils.degToRad(CAMERA_FOV / 2));
+  const distance = Math.max(CAMERA_DISTANCE, (RADIUS + LABEL_MARGIN) / (halfFovTan * (size.width / size.height)));
+
+  useEffect(() => {
+    camera.position.z = distance;
+  }, [camera, distance]);
 
   useFrame((_, delta) => {
     if (!dragRef.current?.active && !reduceMotion && rotationRef.current) {
@@ -65,7 +77,7 @@ function Scene({
 
   return (
     <>
-      <fog attach="fog" args={[PANEL_COLOR, 4.2, 8.6]} />
+      <fog attach="fog" args={[PANEL_COLOR, distance - 2, distance + 2.4]} />
       <group ref={groupRef}>
         {points.map(({ skill, position, quaternion, important }) => (
           <Text
@@ -125,7 +137,7 @@ export default function SkillSphere({ skills, prioritySkills }: SkillSphereProps
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerUp}
     >
-      <Canvas gl={{ alpha: true, antialias: true }} camera={{ position: [0, 0, 6.2], fov: 45 }}>
+      <Canvas gl={{ alpha: true, antialias: true }} camera={{ position: [0, 0, CAMERA_DISTANCE], fov: CAMERA_FOV }}>
         <Scene points={points} rotationRef={rotationRef} dragRef={dragRef} reduceMotion={reduceMotion} />
       </Canvas>
     </div>

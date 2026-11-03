@@ -5,6 +5,10 @@ const reveal = keyframes`
   to { transform: scaleX(1); }
 `;
 
+const blink = keyframes`
+  50% { opacity: 0; }
+`;
+
 const fadeOut = keyframes`
   from { opacity: 1; visibility: visible; }
   to { opacity: 0; visibility: hidden; }
@@ -27,7 +31,7 @@ export const LoaderFrame = styled.div`
 `;
 
 export const LoaderBrand = styled.p`
-  margin: 0 0 36px;
+  margin: 0 0 24px;
   color: var(--accent);
   font:
     16px 'DM Mono',
@@ -35,20 +39,18 @@ export const LoaderBrand = styled.p`
   letter-spacing: 0.12em;
 `;
 
-export const LoaderLogo = styled.img`
-  display: block;
-  width: min(100%, 540px);
-  height: auto;
-  margin: 0 auto 34px;
-`;
-
-export const LoaderStatus = styled.p`
+// Terminal prompt with a blinking cursor.
+export const LoaderPrompt = styled.p`
   margin: 0 0 14px;
   color: var(--muted);
   font:
-    16px 'DM Mono',
+    24px 'DM Mono',
     monospace;
-  letter-spacing: 0.08em;
+
+  span {
+    color: var(--accent);
+    animation: ${blink} 0.8s steps(1) infinite;
+  }
 `;
 
 export const LoaderBar = styled.div`
