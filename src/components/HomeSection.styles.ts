@@ -42,11 +42,34 @@ export const Greeting = styled.h2`
   letter-spacing: 0.02em;
 `;
 
-export const NameLogo = styled.img`
+const drawName = keyframes`
+  to { stroke-dashoffset: 0; }
+`;
+
+export const NameLogo = styled.div`
   display: block;
   width: min(100%, 620px);
-  height: auto;
   margin-bottom: 12px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  path {
+    stroke: var(--accent);
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: ${drawName} 2.5s ease forwards 1.5s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    path {
+      stroke-dashoffset: 0;
+      animation: none;
+    }
+  }
 `;
 
 export const Summary = styled.p`

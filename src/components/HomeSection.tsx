@@ -1,6 +1,8 @@
 import codeThinking from '../svg/code_thinking.svg';
-import logo from '../svg/logo.svg';
+import logoMarkup from '../svg/logo.svg?raw';
 import { Actions, Copy, Eyebrow, Greeting, Home, Illustration, NameLogo, PrimaryButton, Summary } from './HomeSection.styles';
+
+const nameMarkup = logoMarkup.replace(/<style>[\s\S]*?<\/style>/, '').replace(/<path /g, '<path pathLength="1" ');
 
 type HomeSectionProps = {
   greeting: string;
@@ -17,7 +19,7 @@ export default function HomeSection({ greeting, eyebrow, summary, profileName, a
     <Home>
       <Copy>
         <Greeting>{greeting}</Greeting>
-        <NameLogo src={logo} alt={profileName} />
+        <NameLogo role="img" aria-label={profileName} dangerouslySetInnerHTML={{ __html: nameMarkup }} />
         <Eyebrow>{eyebrow}</Eyebrow>
         <Summary>{summary}</Summary>
         <Actions>
