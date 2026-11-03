@@ -468,7 +468,7 @@ function App() {
         )}
 
         {section === 'skills' && (
-          <section className="page-section content-section">
+          <section className="page-section content-section skills-section">
             <div className="section-heading">
               <p className="eyebrow">{eyebrow('skills', copy.skills.eyebrow)}</p>
               <h2>{copy.skills.title}</h2>

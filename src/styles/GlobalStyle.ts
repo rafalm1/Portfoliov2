@@ -39,6 +39,7 @@ const GlobalStyle = createGlobalStyle`
 
   .app-shell {
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 0 5vw;
     display: flex;
     flex-direction: column;
@@ -581,9 +582,14 @@ const GlobalStyle = createGlobalStyle`
     .menu-toggle.open span:last-child {
       transform: translateY(-4px) rotate(-45deg);
     }
-    /* Vertical swipes scroll the page, horizontal drags still rotate the skill cloud. */
-    .skill-cloud-canvas {
-      touch-action: pan-y;
+    .skills-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .skills-section .skill-cloud-shell {
+      flex: 1;
+      height: auto;
+      min-height: 260px;
     }
     .hero,
     .ai-section,
@@ -621,9 +627,6 @@ const GlobalStyle = createGlobalStyle`
     }
     .nav-tabs.open {
       padding: 24px 20px;
-    }
-    .skill-cloud-shell {
-      height: 400px;
     }
     footer {
       gap: 12px;
