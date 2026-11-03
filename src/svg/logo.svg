@@ -5,19 +5,19 @@
 	}
 
 	path { stroke: #c7a971; }
-	path:nth-of-type(1) { stroke-dasharray: 549.0668; stroke-dashoffset: 549.0668; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(2) { stroke-dasharray: 506.4447; stroke-dashoffset: 506.4447; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(3) { stroke-dasharray: 316.0753; stroke-dashoffset: 316.0753; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(4) { stroke-dasharray: 506.4441; stroke-dashoffset: 506.4441; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(5) { stroke-dasharray: 283.1853; stroke-dashoffset: 283.1853; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(6) { stroke-dasharray: 755; stroke-dashoffset: 755; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(7) { stroke-dasharray: 506.445; stroke-dashoffset: 506.445; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(8) { stroke-dasharray: 283.1853; stroke-dashoffset: 283.1853; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(9) { stroke-dasharray: 429.4202; stroke-dashoffset: 429.4202; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(10) { stroke-dasharray: 418.8194; stroke-dashoffset: 418.8194; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(11) { stroke-dasharray: 364.6991; stroke-dashoffset: 364.6991; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(12) { stroke-dasharray: 468; stroke-dashoffset: 468; animation: line-anim 2.5s ease forwards .8s; }
-	path:nth-of-type(13) { stroke-dasharray: 433.7714; stroke-dashoffset: 433.7714; animation: line-anim 2.5s ease forwards .8s; }
+	path:nth-of-type(1) { stroke-dasharray: 549.0668; stroke-dashoffset: 549.0668; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(2) { stroke-dasharray: 506.4447; stroke-dashoffset: 506.4447; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(3) { stroke-dasharray: 316.0753; stroke-dashoffset: 316.0753; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(4) { stroke-dasharray: 506.4441; stroke-dashoffset: 506.4441; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(5) { stroke-dasharray: 283.1853; stroke-dashoffset: 283.1853; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(6) { stroke-dasharray: 755; stroke-dashoffset: 755; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(7) { stroke-dasharray: 506.445; stroke-dashoffset: 506.445; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(8) { stroke-dasharray: 283.1853; stroke-dashoffset: 283.1853; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(9) { stroke-dasharray: 429.4202; stroke-dashoffset: 429.4202; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(10) { stroke-dasharray: 418.8194; stroke-dashoffset: 418.8194; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(11) { stroke-dasharray: 364.6991; stroke-dashoffset: 364.6991; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(12) { stroke-dasharray: 468; stroke-dashoffset: 468; animation: line-anim 2.5s ease forwards 1.5s; }
+	path:nth-of-type(13) { stroke-dasharray: 433.7714; stroke-dashoffset: 433.7714; animation: line-anim 2.5s ease forwards 1.5s; }
 </style>
 <path id="logo-path-1" d="M55.936 113L32.032 71.96H16.192V113H3.08801V12.632H35.488C43.072 12.632 49.456 13.928 54.64 16.52C59.92 19.112 63.856 22.616 66.448 27.032C69.04 31.448 70.336 36.488 70.336 42.152C70.336 49.064 68.32 55.16 64.288 60.44C60.352 65.72 54.4 69.224 46.432 70.952L71.632 113H55.936ZM16.192 61.448H35.488C42.592 61.448 47.92 59.72 51.472 56.264C55.024 52.712 56.8 48.008 56.8 42.152C56.8 36.2 55.024 31.592 51.472 28.328C48.016 25.064 42.688 23.432 35.488 23.432H16.192V61.448Z" stroke="white" stroke-width="5"/>
 <path d="M85.8014 73.256C85.8014 65.192 87.4334 58.136 90.6974 52.088C93.9614 45.944 98.4254 41.192 104.089 37.832C109.849 34.472 116.233 32.792 123.241 32.792C130.153 32.792 136.153 34.28 141.241 37.256C146.329 40.232 150.121 43.976 152.617 48.488V34.088H165.865V113H152.617V98.312C150.025 102.92 146.137 106.76 140.953 109.832C135.865 112.808 129.913 114.296 123.097 114.296C116.089 114.296 109.753 112.568 104.089 109.112C98.4254 105.656 93.9614 100.808 90.6974 94.568C87.4334 88.328 85.8014 81.224 85.8014 73.256ZM152.617 73.4C152.617 67.448 151.417 62.264 149.017 57.848C146.617 53.432 143.353 50.072 139.225 47.768C135.193 45.368 130.729 44.168 125.833 44.168C120.937 44.168 116.473 45.32 112.441 47.624C108.409 49.928 105.193 53.288 102.793 57.704C100.393 62.12 99.1934 67.304 99.1934 73.256C99.1934 79.304 100.393 84.584 102.793 89.096C105.193 93.512 108.409 96.92 112.441 99.32C116.473 101.624 120.937 102.776 125.833 102.776C130.729 102.776 135.193 101.624 139.225 99.32C143.353 96.92 146.617 93.512 149.017 89.096C151.417 84.584 152.617 79.352 152.617 73.4Z" stroke="white" stroke-width="5"/>
