@@ -118,10 +118,7 @@ function App() {
   useEffect(() => {
     fetch('/api/experience')
       .then((response) => (response.ok ? response.json() : Promise.reject()))
-      .then((data: ExperienceByLocale) => {
-        setExperience(data);
-        setOpenExperience(new Set(data.en.map((item) => item.company)));
-      })
+      .then((data: ExperienceByLocale) => setExperience(data))
       .catch(() => setExperienceFailed(true));
   }, []);
 
